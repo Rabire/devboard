@@ -1,5 +1,5 @@
 function App() {
-  return <main>Devdash</main>;
+  return <main className="bg-red-500">Devdash</main>;
 }
 
 export default App;
