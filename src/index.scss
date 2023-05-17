@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply min-h-screen bg-pink-300;
-
-  &:hover {
-    @apply bg-sky-400;
+@layer base {
+  :root {
+    --current-theme: #86b1f9;
   }
 }

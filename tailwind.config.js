@@ -3,6 +3,31 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
+    colors: {
+      dark: "#343A40",
+      "dark-secondary": "#212529",
+      light: "#D5BDAF",
+      "light-secondary": "#F5EBE0",
+      "current-theme": "var(--current-theme)",
+      white: "#FFF",
+      black: "#000",
+      github: {
+        valid: "#238636",
+        reject: "#DA3633",
+        pending: "#EDA619",
+        draft: "#7D8590",
+      },
+      dev: "#",
+      theme: {
+        1: "#F98686",
+        2: "#F9C486",
+        3: "#F5F986",
+        4: "#86B1F9",
+        5: "#9686F9",
+        6: "#F986F9",
+        7: "#86F99F",
+      },
+    },
   },
   plugins: [],
 };
