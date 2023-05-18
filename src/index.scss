@@ -67,12 +67,12 @@
   }
 
   #root {
-    @apply h-screen max-w-screen-2xl mx-auto p-5;
-    @apply md:grid grid-cols-[1fr_9fr] gap-5;
+    @apply min-h-screen max-w-screen-2xl mx-auto p-5;
+    @apply lg:grid grid-cols-[1fr_9fr] gap-5;
   }
 
   main {
-    @apply flex flex-col md:grid gap-5;
+    @apply flex flex-col lg:grid gap-5;
     max-height: calc(100vh - 2.5rem); // 2.5rem = #root padding
   }
 }

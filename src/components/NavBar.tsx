@@ -4,7 +4,7 @@ import DevDashLogo from "./Svg/DevDashLogo";
 import OptionsIcon from "./Svg/OptionsIcon";
 
 const NavBar = () => (
-  <nav className="hidden md:flex bg-light-secondary dark:bg-dark-secondary rounded-2xl flex-col justify-between items-center py-12 px-5">
+  <nav className="hidden lg:flex bg-light-secondary dark:bg-dark-secondary rounded-2xl flex-col justify-between items-center py-12 px-5">
     <DevDashLogo />
 
     <div className="flex flex-col gap-5 items-center">

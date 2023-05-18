@@ -18,9 +18,9 @@ const MobileMenu = () => {
       <button
         onClick={() => setShowModal(true)}
         className={cn(
-          "fixed right-[10px] top-[10px]",
+          "fixed right-1/2 translate-x-1/2 top-[15px] z-40",
           "bg-black rounded-full w-14 aspect-square",
-          "dark:bg-white md:hidden",
+          "dark:bg-white lg:hidden",
           "flex items-center justify-center"
         )}
       >

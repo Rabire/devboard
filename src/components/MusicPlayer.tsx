@@ -4,7 +4,7 @@ import SkipMusicIcon from "./Svg/SkipMusicIcon";
 const MusicPlayer = () => (
   <div className="card flex gap-5 items-center">
     <img
-      className="object-cover h-32 aspect-square rounded-lg border-2 border-white"
+      className="object-cover h-full max-h-32 aspect-square rounded-lg border-2 border-white"
       src="pictures/daft-punk-album.jpg"
     />
 
