@@ -3,10 +3,9 @@ import SkipMusicIcon from "./svg/SkipMusicIcon";
 
 const MusicPlayer = () => (
   <div className="card flex gap-5 items-center">
-    <img
-      className="object-cover h-full max-h-32 aspect-square rounded-lg border-2 border-white"
-      // src="pictures/daft-punk-album.jpg"
-    />
+    <button className="album">
+      <PauseIcon />
+    </button>
 
     <div className="flex flex-col justify-between h-full">
       <div className="flex justify-between">
