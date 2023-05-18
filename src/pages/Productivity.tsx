@@ -1,3 +1,4 @@
+import Calendar from "../components/Calendar";
 import MusicPlayer from "../components/MusicPlayer";
 import TodoList from "../components/TodoList";
 
@@ -18,9 +19,7 @@ const Productivity = () => (
 
     {/* Right */}
     <div className="row-span-2 grid gap-5 grid-rows-[auto_1fr]">
-      <div className="card">
-        <p>Calendar</p>
-      </div>
+      <Calendar />
       <div className="card">Bullet journal</div>
     </div>
 

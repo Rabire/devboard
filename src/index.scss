@@ -52,7 +52,7 @@
 
   body {
     font-family: "Nunito";
-    @apply bg;
+    @apply bg min-w-[282px];
     @apply text-black dark:text-white text-sm;
 
     * {
