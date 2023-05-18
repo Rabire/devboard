@@ -5,7 +5,7 @@ type CardProps = { bold: string; text: string; secondary?: boolean };
 const Card = ({ bold, text, secondary }: CardProps) => (
   <div
     className={classNames(
-      "rounded-xl shadow-lg h-32  p-5 flex flex-col justify-center gap-2.5",
+      "rounded-xl shadow-lg p-2.5 flex flex-col justify-center h-full aspect-square",
       secondary && "bg-current-theme flex-col-reverse whitespace-nowrap",
       secondary ? "bg-current-theme text-black" : "bg"
     )}
@@ -16,7 +16,7 @@ const Card = ({ bold, text, secondary }: CardProps) => (
 );
 
 const PromotionSlider = () => (
-  <div className="h-max card col-span-2 flex gap-5 items-center overflow-x-scroll">
+  <div className="card col-span-2 flex gap-5 items-center overflow-x-scroll">
     <div className="w-min">
       <p className="txt-title whitespace-nowrap mb-2.5">DevDash +</p>
       <p>Franchissez le pas de la productivité</p>

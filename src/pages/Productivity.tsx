@@ -9,10 +9,10 @@ const Productivity = () => (
     <TodoList />
 
     {/* Middle */}
-    <div className="grid grid-rows-4 gap-5">
+    <div className="grid grid-rows-[1fr_4fr] gap-5">
       <MusicPlayer />
 
-      <div className="row-span-4 grid gap-5">
+      <div className="space-y-5">
         <div className="card">Temps par projet</div>
         <div className="card">Tâches términées</div>
       </div>
