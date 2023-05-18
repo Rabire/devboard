@@ -1,5 +1,7 @@
 import { lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import Header from "./components/Header";
+import useDefaultMode from "./hooks/useDefaultMode";
 
 const Productivity = lazy(() => import("./pages/Productivity"));
 const Administrative = lazy(() => import("./pages/Administrative"));
@@ -8,9 +10,11 @@ const Technical = lazy(() => import("./pages/Technical"));
 // TODO: add suspense while loading page
 
 function App() {
+  useDefaultMode();
+
   return (
     <>
-      <header className="card">nav</header>
+      <Header />
 
       <Routes>
         <Route path="/" index element={<Productivity />} />
@@ -18,6 +22,8 @@ function App() {
         <Route path="/administrative" element={<Administrative />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+
+      <button onClick={switchMode}>Mode</button>
     </>
   );
 }

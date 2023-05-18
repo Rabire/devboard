@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@nanostores/persistent': ^0.8.0
   '@types/react': ^18.0.28
   '@types/react-dom': ^18.0.11
   '@typescript-eslint/eslint-plugin': ^5.57.1
@@ -11,6 +12,7 @@ specifiers:
   eslint: ^8.38.0
   eslint-plugin-react-hooks: ^4.6.0
   eslint-plugin-react-refresh: ^0.3.4
+  nanostores: ^0.8.1
   postcss: ^8.4.23
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -27,6 +29,7 @@ dependencies:
   react-router-dom: 6.11.2_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
+  '@nanostores/persistent': 0.8.0_nanostores@0.8.1
   '@types/react': 18.2.6
   '@types/react-dom': 18.2.4
   '@typescript-eslint/eslint-plugin': 5.59.6_hrzo544y7ygaq2nap7kmpxcgnm
@@ -36,6 +39,7 @@ devDependencies:
   eslint: 8.40.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.40.0
   eslint-plugin-react-refresh: 0.3.5_eslint@8.40.0
+  nanostores: 0.8.1
   postcss: 8.4.23
   sass: 1.62.1
   tailwindcss: 3.3.2
@@ -564,6 +568,15 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@nanostores/persistent/0.8.0_nanostores@0.8.1:
+    resolution: {integrity: sha512-R9jfwdcC4CjRgAApOrqjOO0XYXqAMvGGK1L5ztPl9xAEtECSrE2BbEJcHqZULNf40/dFJbi2Qdu0zKSvvSNbEQ==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      nanostores: ^0.8.0
+    dependencies:
+      nanostores: 0.8.1
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -1562,6 +1575,11 @@ packages:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: true
+
+  /nanostores/0.8.1:
+    resolution: {integrity: sha512-1ZCfQtII2XeFDrtqXL2cdQ/diGrLxzRB3YMyQjn8m7GSGQrJfGST2iuqMpWnS/ZlifhtjgR/SX0Jy6Uij6lRLA==}
+    engines: {node: ^16.0.0 || >=18.0.0}
     dev: true
 
   /natural-compare-lite/1.4.0:
