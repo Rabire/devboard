@@ -1,7 +1,9 @@
+import TodoList from "../components/TodoList";
+
 const Productivity = () => (
   <main className="flex flex-col md:grid grid-cols-3 grid-rows-[5fr_1fr] gap-5">
     {/* Left */}
-    <div className="card">Todolist</div>
+    <TodoList />
 
     {/* Middle */}
     <div className="grid grid-rows-4 gap-5">
