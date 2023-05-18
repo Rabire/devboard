@@ -1,6 +1,7 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Header from "./components/Header";
+import MobileMenu from "./components/MobileMenu";
+import NavBar from "./components/NavBar";
 import useDefaultMode from "./hooks/useDefaultMode";
 import { switchMode } from "./stores/theme";
 
@@ -15,13 +16,46 @@ function App() {
 
   return (
     <>
-      <Header />
+      <MobileMenu />
+      <NavBar />
 
       <Routes>
-        <Route path="/" index element={<Productivity />} />
-        <Route path="/technical" element={<Technical />} />
-        <Route path="/administrative" element={<Administrative />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route
+          path="/"
+          index
+          element={
+            <Suspense fallback={<>...</>}>
+              <Productivity />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="technical"
+          element={
+            <Suspense fallback={<>...</>}>
+              <Technical />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="administrative"
+          element={
+            <Suspense fallback={<>...</>}>
+              <Administrative />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<>...</>}>
+              <Navigate to="/" />
+            </Suspense>
+          }
+        />
       </Routes>
 
       <button onClick={switchMode}>Mode</button>

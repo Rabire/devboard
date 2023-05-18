@@ -23,7 +23,7 @@
 
   body {
     @apply bg;
-    @apply text-black dark:text-white;
+    @apply text-black dark:text-white text-sm;
   }
 
   #root {
