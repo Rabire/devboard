@@ -1,4 +1,4 @@
-const DevDashLogo = () => (
+const DevBoardLogo = () => (
   <svg
     width="65"
     height="60"
@@ -22,4 +22,4 @@ const DevDashLogo = () => (
   </svg>
 );
 
-export default DevDashLogo;
+export default DevBoardLogo;

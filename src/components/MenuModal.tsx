@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import MENU_LINKS from "../static/menu-links";
-import DevDashLogo from "./svg/DevDashLogo";
+import DevBoardLogo from "./svg/DevBoardLogo";
 import ExitCrossIcon from "./svg/ExitCrossIcon";
 
 type Props = { closeModal: () => void };
@@ -20,7 +20,7 @@ const MenuModal = ({ closeModal }: Props) => (
           <ExitCrossIcon />
         </button>
         <div className="flex justify-center mb-7">
-          <DevDashLogo />
+          <DevBoardLogo />
         </div>
         {MENU_LINKS.map((link) => (
           <Link key={link.link} to={link.link} className="text-center">
