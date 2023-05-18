@@ -1,5 +1,3 @@
-const Administrative = () => {
-  return <main>Administrative page</main>;
-};
+const Administrative = () => <main>Administrative page</main>;
 
 export default Administrative;

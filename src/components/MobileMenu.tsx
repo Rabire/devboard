@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { createPortal } from "react-dom";
 import cn from "classnames";
 
 import BurgerIcon from "./Svg/BurgerIcon";
 import MenuModal from "./MenuModal";
-import { useLocation } from "react-router-dom";
 
 const MobileMenu = () => {
   const [showModal, setShowModal] = useState(false);

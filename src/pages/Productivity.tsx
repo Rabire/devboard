@@ -1,5 +1,3 @@
-const Productivity = () => {
-  return <main>Productivity page</main>;
-};
+const Productivity = () => <main>Productivity page</main>;
 
 export default Productivity;
