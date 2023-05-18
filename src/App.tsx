@@ -3,7 +3,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import MobileMenu from "./components/MobileMenu";
 import NavBar from "./components/NavBar";
 import useDefaultMode from "./hooks/useDefaultMode";
-import { switchMode } from "./stores/theme";
 
 const Productivity = lazy(() => import("./pages/Productivity"));
 const Administrative = lazy(() => import("./pages/Administrative"));
@@ -57,8 +56,6 @@ function App() {
           }
         />
       </Routes>
-
-      <button onClick={switchMode}>Mode</button>
     </>
   );
 }

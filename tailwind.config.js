@@ -7,8 +7,8 @@ export default {
     colors: {
       dark: "#343A40",
       "dark-secondary": "#212529",
-      light: "#D5BDAF",
-      "light-secondary": "#F5EBE0",
+      light: "#F5EBE0",
+      "light-secondary": "#D5BDAF",
       "current-theme": "var(--current-theme)",
       white: "#FFF",
       black: "#000",
