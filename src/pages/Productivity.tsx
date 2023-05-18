@@ -1,7 +1,7 @@
 import TodoList from "../components/TodoList";
 
 const Productivity = () => (
-  <main className="flex flex-col md:grid grid-cols-3 grid-rows-[5fr_1fr] gap-5">
+  <main className="grid-cols-3 grid-rows-[5fr_1fr]">
     {/* Left */}
     <TodoList />
 
@@ -20,7 +20,13 @@ const Productivity = () => (
       <div className="card">
         <p>Calendar</p>
       </div>
-      <div className="card">Bullet journal</div>
+      <div className="card overflow-y-scroll">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugiat
+        libero unde culpa delectus maxime impedit maiores inventore tempore
+        voluptatum consequatur cum, error hic sint eius, rerum laudantium
+        adipisci est. Laudantium iusto facere, dicta mollitia recusandae
+        doloremque rerum quibusdam quo modi quas temporibus eaque voluptatem,
+      </div>
     </div>
 
     <div className="card col-span-2">slider</div>
