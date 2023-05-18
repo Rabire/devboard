@@ -1,5 +1,6 @@
 import Calendar from "../components/Calendar";
 import MusicPlayer from "../components/MusicPlayer";
+import PromotionSlider from "../components/PromotionSlider";
 import TodoList from "../components/TodoList";
 
 const Productivity = () => (
@@ -23,7 +24,7 @@ const Productivity = () => (
       <div className="card">Bullet journal</div>
     </div>
 
-    <div className="card col-span-2">slider</div>
+    <PromotionSlider />
   </main>
 );
 
