@@ -20,13 +20,7 @@ const Productivity = () => (
       <div className="card">
         <p>Calendar</p>
       </div>
-      <div className="card overflow-y-scroll">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugiat
-        libero unde culpa delectus maxime impedit maiores inventore tempore
-        voluptatum consequatur cum, error hic sint eius, rerum laudantium
-        adipisci est. Laudantium iusto facere, dicta mollitia recusandae
-        doloremque rerum quibusdam quo modi quas temporibus eaque voluptatem,
-      </div>
+      <div className="card">Bullet journal</div>
     </div>
 
     <div className="card col-span-2">slider</div>

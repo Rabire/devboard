@@ -5,6 +5,7 @@ export default {
   theme: {
     extend: {},
     colors: {
+      transparent: "transparent",
       dark: "#343A40",
       "dark-secondary": "#212529",
       light: "#F5EBE0",

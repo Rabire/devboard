@@ -29,6 +29,19 @@
     &:last-child {
       @apply border-b-0;
     }
+
+    &:first-child {
+      @apply pt-0;
+    }
+  }
+
+  .fadeout {
+    position: relative;
+
+    &::after {
+      @apply content-[''] bottom-0 right-0 left-0 absolute h-20 pointer-events-none;
+      @apply bg-gradient-to-t from-light-secondary dark:from-dark-secondary to-transparent;
+    }
   }
 }
 
@@ -40,6 +53,16 @@
   body {
     @apply bg;
     @apply text-black dark:text-white text-sm;
+
+    * {
+      // Firefox
+      scrollbar-width: none;
+      // Google Chrome
+      ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
   }
 
   #root {
