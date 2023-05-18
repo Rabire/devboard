@@ -1,7 +1,9 @@
 import cn from "classnames";
+import BinIcon from "./svg/BinIcon";
+import EditIcon from "./svg/EditIcon";
 
 const TodoTask = () => (
-  <div className="py-5 flex gap-2.5 border-bottom items-center">
+  <div className="py-5 flex gap-2.5 border-bottom items-center relative group">
     <input
       type="checkbox"
       className={cn(
@@ -12,10 +14,16 @@ const TodoTask = () => (
     />
     <div className="space-y-2.5">
       <p className="font-bold">TodoTask</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim saepe
-        magnam sed ea? Unde dolorem expedita facilis veniam adipisci cumque.
-      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div className="hidden absolute bg-secondary gap-2.5 p-2.5 right-0 top-2.5 group-hover:flex">
+      <button>
+        <BinIcon />
+      </button>
+      <button>
+        <EditIcon />
+      </button>
     </div>
   </div>
 );
