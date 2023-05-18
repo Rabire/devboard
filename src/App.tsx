@@ -1,5 +1,10 @@
 function App() {
-  return <main className="bg-current-theme">Devdash</main>;
+  return (
+    <>
+      <header className="card">nav</header>
+      <main>content</main>
+    </>
+  );
 }
 
 export default App;

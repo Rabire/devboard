@@ -2,8 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .bg {
+    @apply bg-light dark:bg-dark;
+  }
+
+  .bg-secondary {
+    @apply bg-light-secondary dark:bg-dark-secondary;
+  }
+
+  .card {
+    @apply bg-dark-secondary rounded-2xl p-5;
+  }
+}
+
 @layer base {
   :root {
     --current-theme: #86b1f9;
+    @apply text-black dark:text-white;
+  }
+
+  body {
+    @apply bg;
+  }
+
+  #root {
+    @apply min-h-screen max-w-screen-2xl mx-auto p-5;
+    @apply grid grid-cols-[1fr_9fr] gap-5;
   }
 }

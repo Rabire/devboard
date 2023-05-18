@@ -17,7 +17,6 @@ export default {
         pending: "#EDA619",
         draft: "#7D8590",
       },
-      dev: "#",
       theme: {
         1: "#F98686",
         2: "#F9C486",
@@ -27,6 +26,9 @@ export default {
         6: "#F986F9",
         7: "#86F99F",
       },
+      dev: "cyan",
+      dev1: "lime",
+      dev2: "greenyellow",
     },
   },
   plugins: [],
