@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { createPortal } from "react-dom";
 import cn from "classnames";
 
-import BurgerIcon from "./Svg/BurgerIcon";
+import BurgerIcon from "./svg/BurgerIcon";
 import MenuModal from "./MenuModal";
 
 const MobileMenu = () => {

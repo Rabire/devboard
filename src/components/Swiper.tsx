@@ -1,4 +1,4 @@
-import SwipeArrowIcon from "./Svg/SwipeArrow-Icon";
+import SwipeArrowIcon from "./svg/SwipeArrow-Icon";
 
 type Props = {
   previous: () => void;

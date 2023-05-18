@@ -1,6 +1,6 @@
-import ProductivityIcon from "../components/Svg/ProductivityIcon";
-import TechnicalIcon from "../components/Svg/TechnicalIcon";
-import AdministrativeIcon from "../components/Svg/AdministrativeIcon";
+import ProductivityIcon from "../components/svg/ProductivityIcon";
+import TechnicalIcon from "../components/svg/TechnicalIcon";
+import AdministrativeIcon from "../components/svg/AdministrativeIcon";
 
 const MENU_LINKS = [
   {

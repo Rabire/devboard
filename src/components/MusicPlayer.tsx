@@ -1,5 +1,5 @@
-import PauseIcon from "./Svg/PauseIcon";
-import SkipMusicIcon from "./Svg/SkipMusicIcon";
+import PauseIcon from "./svg/PauseIcon";
+import SkipMusicIcon from "./svg/SkipMusicIcon";
 
 const MusicPlayer = () => (
   <div className="card flex gap-5 items-center">

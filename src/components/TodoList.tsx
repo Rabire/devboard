@@ -1,4 +1,4 @@
-import AddIcon from "./Svg/AddIcon";
+import AddIcon from "./svg/AddIcon";
 import TodoTask from "./TodoTask";
 
 const TodoList = () => (

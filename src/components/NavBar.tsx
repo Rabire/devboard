@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import MENU_LINKS from "../static/menu-links";
-import DevDashLogo from "./Svg/DevDashLogo";
-import OptionsIcon from "./Svg/OptionsIcon";
+import DevDashLogo from "./svg/DevDashLogo";
+import OptionsIcon from "./svg/OptionsIcon";
 
 const NavBar = () => (
   <nav className="hidden lg:flex bg-light-secondary dark:bg-dark-secondary rounded-2xl flex-col justify-between items-center py-12 px-5">

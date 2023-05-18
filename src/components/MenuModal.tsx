@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import MENU_LINKS from "../static/menu-links";
-import DevDashLogo from "./Svg/DevDashLogo";
-import ExitCrossIcon from "./Svg/ExitCrossIcon";
+import DevDashLogo from "./svg/DevDashLogo";
+import ExitCrossIcon from "./svg/ExitCrossIcon";
 
 type Props = { closeModal: () => void };
 
