@@ -2,7 +2,7 @@ import AddIcon from "./svg/AddIcon";
 import TodoTask from "./TodoTask";
 
 const TodoList = () => (
-  <div className="lg:overflow-y-auto bg-secondary rounded-2xl relative">
+  <section className="lg:overflow-y-auto bg-secondary rounded-2xl relative">
     {/* Header */}
     <div className="flex justify-between items-end sticky top-0 bg-secondary p-5 z-10 rounded-2xl gap-5">
       <div className="txt-title flex gap-2.5 items-center">
@@ -29,7 +29,7 @@ const TodoList = () => (
       <TodoTask />
       <TodoTask />
     </div>
-  </div>
+  </section>
 );
 
 export default TodoList;

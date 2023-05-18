@@ -2,7 +2,7 @@ import PauseIcon from "./svg/PauseIcon";
 import SkipMusicIcon from "./svg/SkipMusicIcon";
 
 const MusicPlayer = () => (
-  <div className="card flex gap-5 items-center">
+  <section className="card flex gap-5 items-center">
     <button className="album">
       <PauseIcon />
     </button>
@@ -39,7 +39,7 @@ const MusicPlayer = () => (
         <p>3:40</p>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default MusicPlayer;

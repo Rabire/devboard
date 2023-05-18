@@ -13,15 +13,15 @@ const Productivity = () => (
       <MusicPlayer />
 
       <div className="space-y-5">
-        <div className="card">Temps par projet</div>
-        <div className="card">Tâches términées</div>
+        <section className="card">Temps par projet</section>
+        <section className="card">Tâches términées</section>
       </div>
     </div>
 
     {/* Right */}
     <div className="row-span-2 grid gap-5 grid-rows-[auto_1fr]">
       <Calendar />
-      <div className="card">Bullet journal</div>
+      <section className="card">Bullet journal</section>
     </div>
 
     <PromotionSlider />

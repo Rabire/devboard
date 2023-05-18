@@ -25,7 +25,8 @@ const Calendar = () => {
   });
 
   return (
-    <div className="card">
+    <section className="card">
+      {/* Header */}
       <div className="flex justify-between mb-5">
         <h3 className="text-bold">{format(month, "MMMM yyyy")}</h3>
         <Swiper
@@ -34,6 +35,7 @@ const Calendar = () => {
         />
       </div>
 
+      {/* Calendar */}
       <div className="grid grid-cols-7">
         {WEEK_DAYS.map((day) => (
           <div className="opacity-50 text-center uppercase" key={day}>
@@ -53,7 +55,7 @@ const Calendar = () => {
           </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
