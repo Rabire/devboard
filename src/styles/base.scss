@@ -1,0 +1,31 @@
+@layer base {
+  :root {
+    --current-theme: #86b1f9;
+  }
+
+  body {
+    font-family: "Nunito";
+    @apply bg min-w-[282px];
+    @apply text-black dark:text-white text-sm;
+
+    * {
+      // Firefox
+      scrollbar-width: none;
+      // Google Chrome
+      ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  #root {
+    @apply min-h-screen max-w-screen-2xl mx-auto p-5;
+    @apply lg:grid grid-cols-[1fr_9fr] gap-5;
+  }
+
+  main {
+    @apply flex flex-col lg:grid gap-5;
+    max-height: calc(100vh - 2.5rem); // 2.5rem = #root padding
+  }
+}

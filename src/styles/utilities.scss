@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer utilities {
   .bg {
     @apply bg-light dark:bg-dark;
@@ -42,37 +38,5 @@
       @apply content-[''] bottom-0 right-0 left-0 absolute h-20 pointer-events-none;
       @apply bg-gradient-to-t from-light-secondary dark:from-dark-secondary to-transparent;
     }
-  }
-}
-
-@layer base {
-  :root {
-    --current-theme: #86b1f9;
-  }
-
-  body {
-    font-family: "Nunito";
-    @apply bg min-w-[282px];
-    @apply text-black dark:text-white text-sm;
-
-    * {
-      // Firefox
-      scrollbar-width: none;
-      // Google Chrome
-      ::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-      }
-    }
-  }
-
-  #root {
-    @apply min-h-screen max-w-screen-2xl mx-auto p-5;
-    @apply lg:grid grid-cols-[1fr_9fr] gap-5;
-  }
-
-  main {
-    @apply flex flex-col lg:grid gap-5;
-    max-height: calc(100vh - 2.5rem); // 2.5rem = #root padding
   }
 }
