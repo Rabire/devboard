@@ -19,15 +19,15 @@
 @layer base {
   :root {
     --current-theme: #86b1f9;
-    @apply text-black dark:text-white;
   }
 
   body {
     @apply bg;
+    @apply text-black dark:text-white;
   }
 
   #root {
     @apply min-h-screen max-w-screen-2xl mx-auto p-5;
-    @apply grid grid-cols-[1fr_9fr] gap-5;
+    @apply md:grid grid-cols-[1fr_9fr] gap-5;
   }
 }

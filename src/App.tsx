@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import useDefaultMode from "./hooks/useDefaultMode";
+import { switchMode } from "./stores/theme";
 
 const Productivity = lazy(() => import("./pages/Productivity"));
 const Administrative = lazy(() => import("./pages/Administrative"));
