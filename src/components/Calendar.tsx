@@ -9,7 +9,12 @@ import {
   startOfMonth,
 } from "date-fns";
 import cn from "classnames";
+import { useStore } from "@nanostores/react";
 import Swiper from "./Swiper";
+import {
+  selectedDay as selectedDayStore,
+  setSelectedDay,
+} from "../stores/productivity";
 
 const WEEK_DAYS = ["L", "M", "m", "J", "V", "S", "D"];
 
@@ -17,7 +22,7 @@ const today = startOfToday();
 
 const Calendar = () => {
   const [month, setMonth] = useState(today);
-  const [selectedDay, setSelectedDay] = useState(today);
+  const selectedDay = useStore(selectedDayStore);
 
   const days = eachDayOfInterval({
     start: startOfMonth(month),
@@ -28,7 +33,7 @@ const Calendar = () => {
     <section className="card">
       {/* Header */}
       <div className="flex justify-between mb-5">
-        <h3 className="text-bold">{format(month, "MMMM yyyy")}</h3>
+        <h3 className="font-bold">{format(month, "MMMM yyyy")}</h3>
         <Swiper
           previous={() => setMonth(add(month, { months: -1 }))}
           next={() => setMonth(add(month, { months: 1 }))}

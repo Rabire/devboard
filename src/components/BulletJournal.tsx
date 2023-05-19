@@ -1,5 +1,7 @@
+import { useStore } from "@nanostores/react";
 import { eachHourOfInterval, format, set, startOfToday } from "date-fns";
 import NotificationIcon from "./svg/NotificationIcon";
+import { selectedDayActivities } from "../stores/productivity";
 
 const selectedDay = startOfToday(); // TODO: should get it in context
 
@@ -8,6 +10,10 @@ const BulletJournal = () => {
     start: set(selectedDay, { hours: 6 }),
     end: set(selectedDay, { hours: 21 }),
   });
+
+  const activities = useStore(selectedDayActivities);
+
+  console.log(activities);
 
   return (
     <section className="lg:overflow-y-auto bg-secondary rounded-2xl">
