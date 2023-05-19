@@ -9,13 +9,12 @@ import ActivityCard from "./ActivityCard";
 
 const BulletJournal = () => {
   const selectedDay = useStore(selectedDayStore);
+  const activities = useStore(selectedDayActivities);
 
   const hours = eachHourOfInterval({
     start: set(selectedDay, { hours: 6 }),
     end: set(selectedDay, { hours: 19 }),
   });
-
-  const activities = useStore(selectedDayActivities);
 
   return (
     <section className="lg:overflow-y-auto bg-secondary rounded-2xl">

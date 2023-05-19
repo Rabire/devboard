@@ -1,9 +1,3 @@
-const MOCK_PROJECTS = [
-  "Projet W",
-  "Projet X",
-  "Projet Y",
-  "Projet Z",
-  "Projets Perso",
-];
+const MOCK_PROJECTS = ["Projet X", "Projet Y", "Projets Perso"];
 
 export default MOCK_PROJECTS;

@@ -15,7 +15,7 @@ import {
   selectedDay as selectedDayStore,
   setSelectedDay,
 } from "../stores/productivity";
-import WEEK_DAYS from "../static/calendar";
+import { WEEK_DAYS } from "../static/calendar";
 
 const today = startOfToday();
 
