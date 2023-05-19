@@ -1,3 +1,4 @@
+import BulletJournal from "../components/BulletJournal";
 import Calendar from "../components/Calendar";
 import MusicPlayer from "../components/MusicPlayer";
 import PromotionSlider from "../components/PromotionSlider";
@@ -21,7 +22,7 @@ const Productivity = () => (
     {/* Right */}
     <div className="row-span-2 grid gap-5 grid-rows-[auto_1fr]">
       <Calendar />
-      <section className="card">Bullet journal</section>
+      <BulletJournal />
     </div>
 
     <PromotionSlider />
