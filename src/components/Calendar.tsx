@@ -46,7 +46,7 @@ const Calendar = () => {
           <button
             onClick={() => setSelectedDay(day)}
             className={cn(
-              "aspect-square rounded-full",
+              "py-2.5 rounded-full",
               isSameDay(day, selectedDay) && "bg-current-theme text-black"
             )}
             key={day.toString()}
