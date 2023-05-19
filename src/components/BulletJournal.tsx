@@ -6,7 +6,7 @@ const selectedDay = startOfToday(); // TODO: should get it in context
 const BulletJournal = () => {
   const hours = eachHourOfInterval({
     start: set(selectedDay, { hours: 6 }),
-    end: set(selectedDay, { hours: 18 }),
+    end: set(selectedDay, { hours: 21 }),
   });
 
   return (
