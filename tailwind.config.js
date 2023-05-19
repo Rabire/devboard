@@ -3,7 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      grayscale: { 75: "75%" },
+    },
     colors: {
       transparent: "transparent",
       dark: "#343A40",
