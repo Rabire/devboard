@@ -2,7 +2,7 @@ import BulletJournal from "../components/BulletJournal";
 import Calendar from "../components/Calendar";
 import MusicPlayer from "../components/MusicPlayer";
 import PromotionSlider from "../components/PromotionSlider";
-import TimeByProjectGraph from "../components/TimeByProjectGraph";
+import ProjectsChart from "../components/ProjectsChart";
 import TodoList from "../components/TodoList";
 
 const Productivity = () => (
@@ -15,7 +15,7 @@ const Productivity = () => (
       <MusicPlayer />
 
       <div className="space-y-5">
-        <TimeByProjectGraph />
+        <ProjectsChart />
         <section className="card">Tâches términées</section>
       </div>
     </div>
