@@ -15,8 +15,7 @@ import {
   selectedDay as selectedDayStore,
   setSelectedDay,
 } from "../stores/productivity";
-
-const WEEK_DAYS = ["L", "M", "m", "J", "V", "S", "D"];
+import WEEK_DAYS from "../static/calendar";
 
 const today = startOfToday();
 
@@ -28,6 +27,8 @@ const Calendar = () => {
     start: startOfMonth(month),
     end: endOfMonth(month),
   });
+
+  const emptyDays = parseInt(format(days[0], "i"), 10) - 1;
 
   return (
     <section className="card">
@@ -46,6 +47,9 @@ const Calendar = () => {
           <div className="opacity-50 text-center uppercase" key={day}>
             {day}
           </div>
+        ))}
+        {new Array(emptyDays).fill("").map((_, index) => (
+          <div key={index}></div>
         ))}
         {days.map((day) => (
           <button

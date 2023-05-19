@@ -1,5 +1,5 @@
 import { useStore } from "@nanostores/react";
-import { eachHourOfInterval, format, isEqual, set } from "date-fns";
+import { eachHourOfInterval, format, set } from "date-fns";
 import {
   selectedDay as selectedDayStore,
   selectedDayActivities,
