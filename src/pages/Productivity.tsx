@@ -3,9 +3,7 @@ import Calendar from "../components/Calendar";
 import MusicPlayer from "../components/MusicPlayer";
 import ProductivityCharts from "../components/ProductivityCharts";
 import PromotionSlider from "../components/PromotionSlider";
-// import ProjectsChart from "../components/ProjectsChart";
 import TodoList from "../components/TodoList";
-// import TasksChart from "../components/TasksChart";
 
 const Productivity = () => (
   <main className="grid-cols-3 grid-rows-[5fr_1fr]">
@@ -15,11 +13,6 @@ const Productivity = () => (
     {/* Middle */}
     <div className="grid grid-rows-[1fr_4fr] gap-5">
       <MusicPlayer />
-
-      {/* <div className="space-y-5"> */}
-      {/* <ProjectsChart /> */}
-      {/* <TasksChart /> */}
-      {/* </div> */}
       <ProductivityCharts />
     </div>
 
