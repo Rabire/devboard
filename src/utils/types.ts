@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export type Slot = { start: number; end: number };
 export type HalfDaySlots = [Slot, Slot]; // Because we generate 4 activities per day
 
@@ -21,3 +22,10 @@ export type Task = {
   isDone: boolean;
   completedAt?: Date;
 };
+
+export enum PRStatus {
+  Ready = "ready",
+  Rejected = "rejected",
+  Pending = "pending",
+  Draft = "draft",
+}
