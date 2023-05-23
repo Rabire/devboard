@@ -31,7 +31,7 @@ const Calendar = () => {
   const emptyDays = parseInt(format(days[0], "i"), 10) - 1;
 
   return (
-    <section className="card">
+    <section>
       {/* Header */}
       <div className="flex justify-between mb-5">
         <h3 className="font-bold">{format(month, "MMMM yyyy")}</h3>

@@ -16,7 +16,7 @@ const Card = ({ bold, text, secondary }: CardProps) => (
 );
 
 const PromotionSlider = () => (
-  <section className="card col-span-2 flex gap-5 items-center overflow-x-scroll">
+  <section className="col-span-2 flex gap-5 items-center overflow-x-scroll">
     <div className="w-min">
       <p className="txt-title whitespace-nowrap mb-2.5">DevBoard +</p>
       <p>Franchissez le pas de la productivité</p>

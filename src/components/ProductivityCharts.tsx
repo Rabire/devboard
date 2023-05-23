@@ -46,7 +46,7 @@ const ProductivityCharts = () => {
   };
 
   return (
-    <section className="card space-y-2.5">
+    <section className="space-y-2.5">
       {/* Header */}
       <div className="flex justify-between items-end">
         <h2 className="txt-title">Tâches terminées</h2>
