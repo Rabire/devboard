@@ -1,4 +1,4 @@
-import { PRStatus } from "../utils/types";
+import PRStatus from "../utils/enums";
 import PRStatusList from "./PRStatusList";
 
 const PullRequestSection = () => (

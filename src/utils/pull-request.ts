@@ -1,4 +1,4 @@
-import { PRStatus } from "./types";
+import PRStatus from "./enums";
 
 const getStatusTitle = (status: PRStatus) => {
   switch (status) {

@@ -6,7 +6,7 @@ import {
   MOCK_ACTIVITIES,
   PM_SLOTS,
 } from "../../static/mock-activities";
-import MOCK_PROJECTS from "../../static/mock-projects";
+import MOCK_PROJECTS from "./projects";
 
 const generateSlotActivity = (day: Date, slot: Slot) => {
   const activity: Activity = {

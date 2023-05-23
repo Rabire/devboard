@@ -1,13 +1,15 @@
 import { faker } from "@faker-js/faker";
-import { PRStatus } from "../types";
+import PRStatus from "../enums";
 import MOCK_PULL_REQUESTS from "../../static/mock-pull-requests";
+import { PRGroup } from "../types";
 
-const PRs = Object.values(PRStatus).map((status) => ({
-  pullRequests: faker.helpers.arrayElements(MOCK_PULL_REQUESTS, {
-    min: 1,
-    max: 2,
-  }),
-  status,
-}));
+const generatePullRequests = (): PRGroup[] =>
+  Object.values(PRStatus).map((status) => ({
+    pullRequests: faker.helpers.arrayElements(MOCK_PULL_REQUESTS, {
+      min: 1,
+      max: 2,
+    }),
+    status,
+  }));
 
-export default PRs;
+export default generatePullRequests;
