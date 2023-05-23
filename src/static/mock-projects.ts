@@ -19,7 +19,7 @@ const MOCK_PROJECTS: Project[] = [
     title: "Projet Z",
     completionPercentage: faker.number.int(99),
     currentSprint: "Sprint #8 - Feature partage de fichiers",
-    deadline: new Date("2023-06-31"),
+    deadline: new Date("2023-06-30"),
   },
 ];
 

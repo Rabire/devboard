@@ -1,6 +1,7 @@
 import { useStore } from "@nanostores/react";
 import ProgressBarSection from "../components/ProgressBarSection";
 import { project } from "../stores/technical";
+import ProjectsSwiper from "../components/ProjectsSwiper";
 
 const Technical = () => {
   const currentProject = useStore(project);
@@ -9,11 +10,9 @@ const Technical = () => {
     <main className="grid-cols-3">
       {/* Left */}
       <div className="space-y-5">
-        <section>
-          <h1>Project Picker</h1>
-        </section>
+        <ProjectsSwiper />
         <ProgressBarSection
-          title={currentProject.title}
+          title={currentProject.currentSprint}
           subTitle="Milestone actuelle"
           percentage={currentProject.completionPercentage}
           deadline={currentProject.deadline}
