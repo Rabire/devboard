@@ -1,38 +1,57 @@
+import { useState } from "react";
+import { doneTasks, todoTasks } from "../stores/productivity";
 import FilterButton from "./FilterButton";
 import AddIcon from "./svg/AddIcon";
 import TodoTask from "./TodoTask";
 
-const TodoList = () => (
-  <section className="lg:overflow-y-auto bg-secondary rounded-2xl">
-    {/* Header */}
-    <div className="flex justify-between items-end sticky top-0 bg-secondary p-5 z-10 rounded-2xl gap-5">
-      <div className="txt-title flex gap-2.5 items-center">
-        <h2>Mes tâches</h2>
-        <button className="bg-black dark:bg-white text-white h-[20px] min-w-[20px] flex items-center justify-center rounded-full">
-          <AddIcon />
-        </button>
+const TodoList = () => {
+  const [filter, setFilter] = useState<"todo" | "done" | "all">("all");
+
+  return (
+    <section className="lg:overflow-y-auto bg-secondary rounded-2xl">
+      {/* Header */}
+      <div className="flex justify-between items-end sticky top-0 bg-secondary p-5 z-10 rounded-2xl gap-5">
+        <div className="txt-title flex gap-2.5 items-center">
+          <h2>Mes tâches</h2>
+          <button className="bg-black dark:bg-white text-white h-[20px] min-w-[20px] flex items-center justify-center rounded-full">
+            <AddIcon />
+          </button>
+        </div>
+
+        <FilterButton
+          buttons={[
+            {
+              label: "Todo",
+              onClick: () => setFilter("todo"),
+              isActive: filter === "todo",
+            },
+            {
+              label: "Done",
+              onClick: () => setFilter("done"),
+              isActive: filter === "done",
+            },
+            {
+              label: "All",
+              onClick: () => setFilter("all"),
+              isActive: filter === "all",
+            },
+          ]}
+        />
       </div>
 
-      <FilterButton
-        buttons={[
-          { label: "Todo", onClick: () => null, isActive: false },
-          { label: "Done", onClick: () => null, isActive: false },
-          { label: "All", onClick: () => null, isActive: true },
-        ]}
-      />
-    </div>
-
-    {/* Tasks */}
-    <div className="mx-5">
-      <TodoTask />
-      <TodoTask />
-      <TodoTask />
-      <TodoTask />
-      <TodoTask />
-      <TodoTask />
-      <TodoTask />
-    </div>
-  </section>
-);
+      {/* Tasks */}
+      <div className="mx-5">
+        {filter !== "done" &&
+          todoTasks
+            .get()
+            .map((task) => <TodoTask key={task.title} task={task} />)}
+        {filter !== "todo" &&
+          doneTasks
+            .get()
+            .map((task) => <TodoTask key={task.title} task={task} />)}
+      </div>
+    </section>
+  );
+};
 
 export default TodoList;
