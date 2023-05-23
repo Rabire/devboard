@@ -3,6 +3,7 @@ import ProgressBarSection from "../components/ProgressBarSection";
 import { project } from "../stores/technical";
 import ProjectsSwiper from "../components/ProjectsSwiper";
 import PullRequestSection from "../components/PullRequestSection";
+import CodeBaseChart from "../components/CodeBaseChart";
 
 const Technical = () => {
   const currentProject = useStore(project);
@@ -32,9 +33,7 @@ const Technical = () => {
         <section>
           <h2>Notes rapides</h2>
         </section>
-        <section>
-          <h2>Codebase actuelle</h2>
-        </section>
+        <CodeBaseChart />
       </div>
 
       {/* Right */}
