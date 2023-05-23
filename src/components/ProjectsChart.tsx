@@ -10,36 +10,22 @@ import {
 import { Bar } from "react-chartjs-2";
 import useProjectsChart from "../hooks/useProjectsChart";
 import { LAST_MONTHS, LAST_WEEKS } from "../static/calendar";
-import { settings } from "../stores/theme";
-import THEME_COLORS from "../utils/tailwing-config";
 import FilterButton from "./FilterButton";
+import { scales, color } from "../static/chart-options";
 
 ChartJS.defaults.font.size = 12;
 ChartJS.defaults.font.family = "Nunito";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
-const { mode } = settings.get();
-
 const OPTIONS = {
   plugins: {
     legend: {
       position: "bottom",
-      labels: { color: THEME_COLORS.white },
+      labels: { color },
     },
   },
-  scales: {
-    x: {
-      stacked: true,
-      grid: { color: THEME_COLORS[mode] },
-      ticks: { color: THEME_COLORS.white },
-    },
-    y: {
-      stacked: true,
-      grid: { color: THEME_COLORS[mode] },
-      ticks: { color: THEME_COLORS.white },
-    },
-  },
+  scales,
 };
 
 const ProjectsChart = () => {
