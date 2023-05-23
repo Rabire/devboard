@@ -1,3 +1,4 @@
+import FilterButton from "./FilterButton";
 import AddIcon from "./svg/AddIcon";
 import TodoTask from "./TodoTask";
 
@@ -12,11 +13,13 @@ const TodoList = () => (
         </button>
       </div>
 
-      <div className="text-xs">
-        <button className="px-1">Todo</button>
-        <button className="px-1">Done</button>
-        <button className="px-1 txt-active">All</button>
-      </div>
+      <FilterButton
+        buttons={[
+          { label: "Todo", onClick: () => null, isActive: false },
+          { label: "Done", onClick: () => null, isActive: false },
+          { label: "All", onClick: () => null, isActive: true },
+        ]}
+      />
     </div>
 
     {/* Tasks */}

@@ -3,7 +3,6 @@ import {
   CategoryScale,
   LinearScale,
   BarElement,
-  Title,
   Tooltip,
   Legend,
   ChartData,
@@ -13,6 +12,7 @@ import useProjectsChart from "../hooks/useProjectsChart";
 import { LAST_MONTHS, LAST_WEEKS } from "../static/calendar";
 import { settings } from "../stores/theme";
 import THEME_COLORS from "../utils/tailwing-config";
+import FilterButton from "./FilterButton";
 
 ChartJS.defaults.font.size = 12;
 ChartJS.defaults.font.family = "Nunito";
@@ -55,23 +55,19 @@ const ProjectsChart = () => {
       {/* Header */}
       <div className="flex justify-between items-end">
         <h2 className="txt-title">Heures travaillées</h2>
-        <div className="text-xs">
-          <button
-            onClick={() => setIsWeek(true)}
-            className={`px-1 ${isWeek && "txt-active"}`}
-          >
-            Week
-          </button>
-          <button
-            onClick={() => setIsWeek(false)}
-            className={`px-1 ${!isWeek && "txt-active"}`}
-          >
-            Month
-          </button>
-        </div>
+        <FilterButton
+          buttons={[
+            { label: "Week", onClick: () => setIsWeek(true), isActive: isWeek },
+            {
+              label: "Month",
+              onClick: () => setIsWeek(false),
+              isActive: !isWeek,
+            },
+          ]}
+        />
       </div>
 
-      {/* Graph */}
+      {/* Chart */}
       <Bar options={OPTIONS} data={DATA} />
     </section>
   );

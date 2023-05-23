@@ -4,6 +4,7 @@ import MusicPlayer from "../components/MusicPlayer";
 import PromotionSlider from "../components/PromotionSlider";
 import ProjectsChart from "../components/ProjectsChart";
 import TodoList from "../components/TodoList";
+import TasksChart from "../components/TasksChart";
 
 const Productivity = () => (
   <main className="grid-cols-3 grid-rows-[5fr_1fr]">
@@ -16,7 +17,7 @@ const Productivity = () => (
 
       <div className="space-y-5">
         <ProjectsChart />
-        <section className="card">Tâches términées</section>
+        <TasksChart />
       </div>
     </div>
 
