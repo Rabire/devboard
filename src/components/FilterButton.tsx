@@ -1,3 +1,5 @@
+import cn from "classnames";
+
 type Button = {
   label: string; // Should be unique
   onClick: () => void;
@@ -14,7 +16,10 @@ const FilterButton = ({ buttons }: Props) => (
       <button
         key={button.label}
         onClick={button.onClick}
-        className={`px-1 ${button.isActive && "txt-active"}`}
+        // className={`px-1 ${button.isActive && "txt-active"}`}
+        className={cn("px-1", {
+          "bg-current-theme font-semibold rounded-full px-2": button.isActive,
+        })}
       >
         {button.label}
       </button>
