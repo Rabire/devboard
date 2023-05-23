@@ -49,7 +49,7 @@ const ProductivityCharts = () => {
     <section className="space-y-2.5">
       {/* Header */}
       <div className="flex justify-between items-end">
-        <h2 className="txt-title">Tâches terminées</h2>
+        <h2>Tâches terminées</h2>
         <FilterButton
           buttons={[
             { label: "Week", onClick: () => setIsWeek(true), isActive: isWeek },
@@ -65,7 +65,7 @@ const ProductivityCharts = () => {
       {/* Chart */}
       <Bar options={TASKS_OPTIONS} data={tasksData} />
 
-      <h2 className="txt-title">Heures travaillées</h2>
+      <h2>Heures travaillées</h2>
       <Bar options={ACTIVITIES_OPTIONS} data={projectsData} />
     </section>
   );

@@ -28,4 +28,8 @@
     @apply flex flex-col lg:grid gap-5;
     max-height: calc(100vh - 2.5rem); // 2.5rem = #root padding
   }
+
+  h2 {
+    @apply txt-title;
+  }
 }

@@ -20,7 +20,7 @@ const BulletJournal = () => {
     <section className="lg:overflow-y-auto bg-secondary rounded-2xl">
       {/* Header */}
       <div className="flex justify-between sticky top-0 bg-secondary p-5 z-20 mb-2.5">
-        <h2 className="txt-title">Bullet journal</h2>
+        <h2>Bullet journal</h2>
         <button>
           <NotificationIcon />
         </button>
