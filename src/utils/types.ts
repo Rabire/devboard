@@ -7,3 +7,9 @@ export type Activity = {
   start: Date;
   end: Date;
 };
+
+export type Task = {
+  title: string;
+  description?: string;
+  isDone: boolean;
+};
