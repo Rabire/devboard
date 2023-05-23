@@ -1,3 +1,5 @@
+import ProgressBarSection from "../components/ProgressBarSection";
+
 const Technical = () => (
   <main className="grid-cols-3">
     {/* Left */}
@@ -5,9 +7,12 @@ const Technical = () => (
       <section>
         <h1>Project Picker</h1>
       </section>
-      <section>
-        <h2>Milestone</h2>
-      </section>
+      <ProgressBarSection
+        title="okok"
+        subTitle="Milestone actuelle"
+        percentage={80}
+        deadline={new Date()}
+      />
       <section>
         <h2>Issues statistiques</h2>
       </section>
