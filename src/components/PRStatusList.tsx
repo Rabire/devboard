@@ -14,10 +14,12 @@ const PRStatusList = ({ status }: Props) => {
 
   return (
     <div className="flex gap-5 border-bottom py-2.5">
-      {status === PRStatus.Ready && <GhReadyIcon />}
-      {status === PRStatus.Pending && <GhPendingIcon />}
-      {status === PRStatus.Rejected && <GhRejectedIcon />}
-      {status === PRStatus.Draft && <GhDraftIcon />}
+      <div className="min-w-[25px]">
+        {status === PRStatus.Ready && <GhReadyIcon />}
+        {status === PRStatus.Pending && <GhPendingIcon />}
+        {status === PRStatus.Rejected && <GhRejectedIcon />}
+        {status === PRStatus.Draft && <GhDraftIcon />}
+      </div>
 
       <div className="overflow-hidden">
         <p className="font-semibold">
