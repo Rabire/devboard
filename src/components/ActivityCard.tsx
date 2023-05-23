@@ -24,7 +24,7 @@ const ActivityCard = ({ activities, hour }: Props) => {
         {activity.name}
       </p>
       <div className="text-xs bg-dark text-white py-0.5 px-5 rounded-full whitespace-nowrap self-start">
-        {activity.project}
+        {activity.project.title}
       </div>
     </div>
   );

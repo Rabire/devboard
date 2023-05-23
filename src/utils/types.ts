@@ -1,9 +1,16 @@
 export type Slot = { start: number; end: number };
 export type HalfDaySlots = [Slot, Slot]; // Because we generate 4 activities per day
 
+export type Project = {
+  title: string;
+  completionPercentage: number;
+  currentSprint: string;
+  deadline: Date;
+};
+
 export type Activity = {
   name: string;
-  project: string;
+  project: Project;
   start: Date;
   end: Date;
 };
