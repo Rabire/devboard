@@ -2,6 +2,7 @@ import { useStore } from "@nanostores/react";
 import ProgressBarSection from "../components/ProgressBarSection";
 import { project } from "../stores/technical";
 import ProjectsSwiper from "../components/ProjectsSwiper";
+import PullRequestSection from "../components/PullRequestSection";
 
 const Technical = () => {
   const currentProject = useStore(project);
@@ -38,9 +39,7 @@ const Technical = () => {
 
       {/* Right */}
       <div className="space-y-5">
-        <section>
-          <h2>Mes pull-requests</h2>
-        </section>
+        <PullRequestSection />
         <section>
           <h2>Notifications</h2>
         </section>
