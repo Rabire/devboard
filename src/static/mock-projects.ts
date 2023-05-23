@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import { startOfToday } from "date-fns";
 import { Project } from "../utils/types";
 
 const MOCK_PROJECTS: Project[] = [
@@ -6,13 +7,13 @@ const MOCK_PROJECTS: Project[] = [
     title: "Projet X",
     completionPercentage: faker.number.int(99),
     currentSprint: "Sprint #3 - Feature parcours souscription",
-    deadline: new Date(),
+    deadline: new Date("2023-12-31"),
   },
   {
     title: "Projet Y",
     completionPercentage: faker.number.int(99),
     currentSprint: "Sprint #13 - Refactoring legacy code",
-    deadline: new Date("2023-12-31"),
+    deadline: startOfToday(),
   },
   {
     title: "Projet Z",
