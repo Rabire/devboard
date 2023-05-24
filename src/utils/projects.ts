@@ -6,7 +6,7 @@ import generateSprint from "./faker/sprint";
 
 const generateProject = (title: string): Project => {
   const sprints = Array.from({ length: 3 }, () => generateSprint());
-  const members = Array.from({ length: 10 }, () => generatePerson(sprints));
+  const members = Array.from({ length: 15 }, () => generatePerson(sprints));
 
   return {
     title,

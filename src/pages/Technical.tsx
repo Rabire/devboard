@@ -15,7 +15,7 @@ const Technical = () => {
   return (
     <main className="grid-cols-3">
       {/* Left */}
-      <div className="space-y-5">
+      <div className="flex flex-col gap-5">
         <ProjectsSwiper />
         <ProgressBarSection
           title={currentProject.name}
@@ -23,9 +23,6 @@ const Technical = () => {
           percentage={currentProject.completionPercentage}
           deadline={currentProject.deadline}
         />
-        <section>
-          <h2>Issues statistiques</h2>
-        </section>
         <TeamSection />
       </div>
 
@@ -39,7 +36,7 @@ const Technical = () => {
       <div className="space-y-5">
         <PullRequestSection />
         <section>
-          <h2>Notifications</h2>
+          <h2>Issues statistiques</h2>
         </section>
       </div>
     </main>

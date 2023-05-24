@@ -6,7 +6,7 @@ const ProjectsSwiper = () => {
   const currentProject = useStore(project);
 
   return (
-    <section className="flex justify-between items-center gap-5 py-2.5 rounded-lg">
+    <section className="flex justify-between items-center gap-5 py-2.5 rounded-lg flex-1">
       <h2>{currentProject.title}</h2>
 
       <Swiper
