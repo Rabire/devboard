@@ -4,6 +4,7 @@ import { project } from "../stores/technical";
 import ProjectsSwiper from "../components/ProjectsSwiper";
 import PullRequestSection from "../components/PullRequestSection";
 import CodeBaseChart from "../components/CodeBaseChart";
+import NotesTakingSection from "../components/NotesTakingSection";
 
 const Technical = () => {
   const currentProject = useStore(project);
@@ -29,10 +30,8 @@ const Technical = () => {
       </div>
 
       {/* Middle */}
-      <div className="space-y-5">
-        <section>
-          <h2>Notes rapides</h2>
-        </section>
+      <div className="gap-5 flex flex-col">
+        <NotesTakingSection />
         <CodeBaseChart />
       </div>
 

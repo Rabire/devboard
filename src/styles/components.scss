@@ -21,3 +21,26 @@
 section {
   @apply bg-secondary rounded-2xl p-5;
 }
+
+.md {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold text-base;
+  }
+
+  code {
+    @apply bg rounded-md p-px;
+  }
+
+  ul {
+    @apply list-disc list-inside;
+  }
+
+  blockquote {
+    @apply border-l-2 border-light dark:border-dark pl-2;
+  }
+}
