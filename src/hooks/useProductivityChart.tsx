@@ -22,7 +22,7 @@ const useProductivityChart = () => {
   const activitiesDatasets = [
     ...new Set(activities.map((act) => act.project)),
   ].map((project, i) => ({
-    label: project,
+    label: project.title,
     data: isWeek
       ? LAST_WEEKS.map(() => faker.number.int(12))
       : LAST_MONTHS.map(() => faker.number.int(40)),
