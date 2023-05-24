@@ -6,6 +6,7 @@ import PullRequestSection from "../components/PullRequestSection";
 import CodeBaseChart from "../components/CodeBaseChart";
 import NotesTakingSection from "../components/NotesTakingSection";
 import TeamSection from "../components/TeamSection";
+import IssuesChart from "../components/IssuesChart";
 
 const Technical = () => {
   const { sprints } = useStore(project);
@@ -33,11 +34,9 @@ const Technical = () => {
       </div>
 
       {/* Right */}
-      <div className="space-y-5">
+      <div className="flex flex-col gap-5">
         <PullRequestSection />
-        <section>
-          <h2>Issues statistiques</h2>
-        </section>
+        <IssuesChart />
       </div>
     </main>
   );
