@@ -15,7 +15,7 @@ const Technical = () => {
   return (
     <main className="grid-cols-3">
       {/* Left */}
-      <div className="flex flex-col gap-5">
+      <div className="grid grid-rows-[1fr_2fr_5fr] gap-5 max-h-[var(--content-height)]">
         <ProjectsSwiper />
         <ProgressBarSection
           title={currentProject.name}

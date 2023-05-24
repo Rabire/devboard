@@ -15,7 +15,7 @@ const ProgressBarSection = ({
   deadline,
 }: Props) => (
   <section>
-    <p className="opacity-50">{subTitle}</p>
+    <p className="opacity-50 mb-1">{subTitle}</p>
     <h2 className="mb-4">{title}</h2>
     <div>
       <div className="h-2 w-full bg rounded-full overflow-hidden relative">

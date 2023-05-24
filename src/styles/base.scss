@@ -1,6 +1,7 @@
 @layer base {
   :root {
     --current-theme: #86b1f9;
+    --content-height: calc(100vh - 2.5rem); // 2.5rem = #root padding
   }
 
   body {
@@ -24,9 +25,12 @@
     @apply lg:grid grid-cols-[1fr_9fr] gap-5;
   }
 
+  .max-h-content {
+    max-height: var(--content-height);
+  }
+
   main {
-    @apply flex flex-col lg:grid gap-5;
-    max-height: calc(100vh - 2.5rem); // 2.5rem = #root padding
+    @apply flex flex-col lg:grid gap-5 max-h-content;
   }
 
   h2 {

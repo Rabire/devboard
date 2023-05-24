@@ -1,4 +1,4 @@
-import { atom } from "nanostores";
+import { atom, computed } from "nanostores";
 import projects from "../utils/projects";
 
 export const project = atom(projects[0]);
@@ -12,3 +12,17 @@ export const swipeProject = (direction: "left" | "right") => {
 
   project.set(projects[direction === "left" ? prevIndex : nextIndex]);
 };
+
+export const teams = computed(project, ({ members }) =>
+  [...new Set(members.map((member) => member.team))].map((team) => ({
+    name: team,
+    members: members.filter((member) => member.team === team),
+  }))
+);
+
+export const membersSprints = computed(project, ({ members, sprints }) =>
+  [...new Set(sprints)].map((sprint) => ({
+    sprint,
+    members: members.filter((member) => member.sprint === sprint),
+  }))
+);
