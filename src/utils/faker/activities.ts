@@ -1,17 +1,19 @@
 import { eachDayOfInterval, isSaturday, isSunday, set } from "date-fns";
 import { faker } from "@faker-js/faker";
 import { Activity, Slot } from "../types";
+import { project as projectStore } from "../../stores/technical";
 import {
   AM_SLOTS,
   MOCK_ACTIVITIES,
   PM_SLOTS,
 } from "../../static/mock-activities";
-import MOCK_PROJECTS from "./projects";
+
+const project = projectStore.get();
 
 const generateSlotActivity = (day: Date, slot: Slot) => {
   const activity: Activity = {
     name: faker.helpers.arrayElement(MOCK_ACTIVITIES),
-    project: faker.helpers.arrayElement(MOCK_PROJECTS),
+    project,
     start: set(day, { hours: slot.start }),
     end: set(day, { hours: slot.end }),
   };

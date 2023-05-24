@@ -8,12 +8,26 @@ export type PRGroup = {
   status: PRStatus;
 };
 
+export type Sprint = {
+  name: string;
+  issue: number;
+  completionPercentage: number;
+  deadline: Date;
+};
+
+export type Person = {
+  id: string;
+  name: string;
+  team: string;
+  sprint: Sprint;
+  image: string;
+};
+
 export type Project = {
   title: string;
-  completionPercentage: number;
-  currentSprint: string;
-  deadline: Date;
+  sprints: Sprint[];
   pullRequests: PRGroup[];
+  members: Person[];
 };
 
 export type Activity = {

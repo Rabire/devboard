@@ -1,16 +1,14 @@
 import { atom } from "nanostores";
-import fakeMockProjects from "../utils/faker/projects";
+import projects from "../utils/projects";
 
-export const project = atom(fakeMockProjects[0]);
+export const project = atom(projects[0]);
 
 export const swipeProject = (direction: "left" | "right") => {
   const currentProject = project.get();
-  const currentIndex = fakeMockProjects.indexOf(currentProject);
+  const currentIndex = projects.indexOf(currentProject);
 
-  const nextIndex =
-    currentIndex === fakeMockProjects.length - 1 ? 0 : currentIndex + 1;
-  const prevIndex =
-    currentIndex === 0 ? fakeMockProjects.length - 1 : currentIndex - 1;
+  const nextIndex = currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+  const prevIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
 
-  project.set(fakeMockProjects[direction === "left" ? prevIndex : nextIndex]);
+  project.set(projects[direction === "left" ? prevIndex : nextIndex]);
 };

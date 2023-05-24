@@ -5,9 +5,12 @@ import ProjectsSwiper from "../components/ProjectsSwiper";
 import PullRequestSection from "../components/PullRequestSection";
 import CodeBaseChart from "../components/CodeBaseChart";
 import NotesTakingSection from "../components/NotesTakingSection";
+import TeamSection from "../components/TeamSection";
 
 const Technical = () => {
-  const currentProject = useStore(project);
+  const { sprints } = useStore(project);
+
+  const currentProject = sprints[0];
 
   return (
     <main className="grid-cols-3">
@@ -15,7 +18,7 @@ const Technical = () => {
       <div className="space-y-5">
         <ProjectsSwiper />
         <ProgressBarSection
-          title={currentProject.currentSprint}
+          title={currentProject.name}
           subTitle="Milestone actuelle"
           percentage={currentProject.completionPercentage}
           deadline={currentProject.deadline}
@@ -23,10 +26,7 @@ const Technical = () => {
         <section>
           <h2>Issues statistiques</h2>
         </section>
-        <section>
-          <h2>Teams</h2>
-          <h2>Travail sur</h2>
-        </section>
+        <TeamSection />
       </div>
 
       {/* Middle */}
