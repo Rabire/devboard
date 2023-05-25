@@ -17,7 +17,7 @@ const BulletJournal = () => {
   });
 
   return (
-    <section className="lg:overflow-y-auto bg-secondary rounded-2xl">
+    <section className="lg:overflow-y-auto bg-secondary rounded-2xl p-0">
       {/* Header */}
       <div className="flex justify-between sticky top-0 bg-secondary p-5 z-20 mb-2.5">
         <h2>Bullet journal</h2>
