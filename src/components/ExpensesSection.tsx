@@ -1,7 +1,7 @@
 import generateExpense from "../utils/faker/expenses";
 import Expense from "./Expense";
 
-const expenses = Array.from({ length: 50 }, () => generateExpense()).sort(
+const expenses = Array.from({ length: 50 }, generateExpense).sort(
   (a, b) => b.date.getTime() - a.date.getTime()
 );
 const ExpensesSection = () => (

@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 import { Expense } from "../types";
-import { formatFakerExpense, formatPrice } from "../format";
+import { formatFakerExpense, formatCurrency } from "../format";
 
 const generateExpense = (): Expense => {
   const fakeAmount = faker.number.float({
@@ -13,7 +13,7 @@ const generateExpense = (): Expense => {
 
   return {
     description: formatFakerExpense(fakeDescription),
-    amount: formatPrice(fakeAmount),
+    amount: formatCurrency(fakeAmount),
     date: faker.date.past(),
   };
 };
