@@ -47,7 +47,7 @@ const LABELS = [
   "Accessibilité",
 ];
 
-export const data = {
+const data = {
   labels: LABELS,
   datasets: [
     {
@@ -68,11 +68,9 @@ ChartJS.register(
 );
 
 const CodeBaseChart = () => (
-  <section className="">
+  <section>
     <h2>Codebase actuelle</h2>
-    {/* <div className="max-h-64 flex justify-center"> */}
     <Radar options={OPTIONS} data={data} />
-    {/* </div> */}
   </section>
 );
 

@@ -16,7 +16,7 @@ const Technical = () => {
   return (
     <main className="grid-cols-3">
       {/* Left */}
-      <div className="grid grid-rows-[1fr_2fr_5fr] gap-5 max-h-[var(--content-height)]">
+      <div className="grid grid-rows-[1fr_2fr_5fr] gap-5 max-h-content">
         <ProjectsSwiper />
         <ProgressBarSection
           title={currentProject.name}
@@ -28,15 +28,15 @@ const Technical = () => {
       </div>
 
       {/* Middle */}
-      <div className="gap-5 flex flex-col">
+      <div className="gap-5 flex flex-col max-h-content">
         <NotesTakingSection />
-        <CodeBaseChart />
+        <IssuesChart />
       </div>
 
       {/* Right */}
-      <div className="flex flex-col gap-5">
+      <div className="grid grid-rows-[auto_1fr] gap-5 max-h-content">
         <PullRequestSection />
-        <IssuesChart />
+        <CodeBaseChart />
       </div>
     </main>
   );
