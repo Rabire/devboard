@@ -2,6 +2,7 @@ import { faker } from "@faker-js/faker";
 import { endOfYear } from "date-fns";
 import ProgressBarSection from "../components/ProgressBarSection";
 import ExpensesSection from "../components/ExpensesSection";
+import CreditCard from "../components/CreditCard";
 
 const Administrative = () => (
   <main className="grid-cols-[6fr_3fr] gap-5">
@@ -24,7 +25,7 @@ const Administrative = () => (
     </div>
 
     <div className="flex flex-col gap-5 max-h-content">
-      <section>CB-Solde</section>
+      <CreditCard />
       <ExpensesSection />
     </div>
   </main>
