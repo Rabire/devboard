@@ -2,10 +2,10 @@ import cn from "classnames";
 import generateFile from "../utils/faker/files";
 import getFileIcon from "../utils/files";
 
-const files = Array.from({ length: 8 }, generateFile);
+const files = Array.from({ length: 20 }, generateFile);
 
 const FilesSlider = () => (
-  <section className="col-span-2 flex overflow-x-scroll">
+  <section className="col-span-2 flex overflow-x-scroll items-center">
     <h2 className="mr-5">
       Mes
       <br />
@@ -22,7 +22,7 @@ const FilesSlider = () => (
         )}
       >
         {getFileIcon(file.extention)}
-        <p className="absolute -bottom-4 left-1/2 -translate-x-1/2 hidden group-hover:block">
+        <p className="absolute -bottom-6 left-1/2 -translate-x-1/2 hidden group-hover:block">
           {file.name}
         </p>
       </button>

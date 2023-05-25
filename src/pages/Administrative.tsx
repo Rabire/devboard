@@ -5,12 +5,13 @@ import ExpensesSection from "../components/ExpensesSection";
 import CreditCard from "../components/CreditCard";
 import AdministrationButtons from "../components/AdministrationButtons";
 import FilesSlider from "../components/FilesSlider";
+import DoughnutSection from "../components/DoughnutSection";
 
 const Administrative = () => (
-  <main className="grid-cols-[6fr_3fr] gap-5">
-    <div className="grid grid-rows-[2fr_1fr_2fr_1fr] grid-cols-2 gap-5 max-h-content">
-      <section>Revenus par clients</section>
-      <section>Chiffre d’affaire</section>
+  <main className="grid-cols-[1fr_400px]">
+    <div className="grid grid-rows-[2fr_1fr_1fr] grid-cols-2 gap-5 max-h-content">
+      <DoughnutSection type="incomes" />
+      <DoughnutSection type="turnover" />
 
       <div className="col-span-2 grid grid-cols-[2fr_4fr] gap-5">
         <AdministrationButtons />
@@ -22,7 +23,6 @@ const Administrative = () => (
         />
       </div>
 
-      <section className="col-span-2">Revenus et dépenses</section>
       <FilesSlider />
     </div>
 

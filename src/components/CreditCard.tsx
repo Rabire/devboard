@@ -11,7 +11,7 @@ const CreditCard = () => {
   const [ccvHidden, setCcvHidden] = useState(true);
 
   return (
-    <section className="p-7 aspect-video flex flex-col gap-5 justify-between border-[1px] border-black dark:border-white">
+    <section className="p-7 flex flex-col gap-5 justify-between border-[1px] border-black dark:border-white">
       <div>
         <p className="opacity-50">Solde disponible</p>
         <p className="text-4xl font-bold">{formatCurrency(9999)}</p>
