@@ -6,10 +6,6 @@ import { color } from "../static/chart-options";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-type Props = {
-  type: "incomes" | "turnover";
-};
-
 const options = {
   plugins: {
     legend: {
@@ -20,15 +16,13 @@ const options = {
   borderWidth: 0,
 };
 
-const DoughnutSection = ({ type }: Props) => {
-  const { year, setYear, data } = useDoughnutChart(type);
+const DoughnutSection = () => {
+  const { year, setYear, data } = useDoughnutChart();
 
   return (
     <section>
       <div className="flex justify-between items-end mb-5">
-        <h2>
-          {type === "incomes" ? "Revenus par clients" : "Chiffre d’affaire"}
-        </h2>
+        <h2>Chiffre d’affaire</h2>
         <FilterButton
           buttons={[
             {
