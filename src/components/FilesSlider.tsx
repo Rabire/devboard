@@ -5,7 +5,7 @@ import getFileIcon from "../utils/files";
 const files = Array.from({ length: 20 }, generateFile);
 
 const FilesSlider = () => (
-  <section className="col-span-2 flex overflow-x-scroll items-center">
+  <section className="flex overflow-x-scroll items-center">
     <h2 className="mr-5">
       Mes
       <br />

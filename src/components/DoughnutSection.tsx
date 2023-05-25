@@ -9,7 +9,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const options = {
   plugins: {
     legend: {
-      position: "bottom",
+      position: "right",
       labels: { color },
     },
   },
@@ -39,7 +39,7 @@ const DoughnutSection = () => {
         />
       </div>
 
-      <Doughnut options={options} data={data} />
+      <Doughnut className="max-h-48" options={options} data={data} />
     </section>
   );
 };

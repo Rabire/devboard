@@ -10,23 +10,19 @@ import IncomeAndSpendsChart from "../components/IncomeAndSpendsChart";
 
 const Administrative = () => (
   <main className="grid-cols-[1fr_400px]">
-    <div className="grid grid-rows-[2fr_1fr_1fr] grid-cols-2 gap-5 max-h-content">
-      {/* <DoughnutSection type="incomes" /> */}
+    <div className="grid grid-rows-[1fr_3fr_1fr] grid-cols-2 gap-5 max-h-content">
+      <ProgressBarSection
+        subTitle="Objectifs"
+        title="Semestre 2 - 65 000€"
+        percentage={faker.number.int(100)}
+        deadline={endOfYear(new Date())}
+      />
+      <AdministrationButtons />
+
       <DoughnutSection />
-
       <IncomeAndSpendsChart />
-
-      <div className="col-span-2 grid grid-cols-[2fr_4fr] gap-5">
-        <AdministrationButtons />
-        <ProgressBarSection
-          subTitle="Objectifs"
-          title="Semestre 2 - 65 000€"
-          percentage={faker.number.int(100)}
-          deadline={endOfYear(new Date())}
-        />
-      </div>
-
       <FilesSlider />
+      <DoughnutSection />
     </div>
 
     <div className="flex flex-col gap-5 max-h-content">
