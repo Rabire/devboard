@@ -12,3 +12,13 @@ const scale = {
 };
 
 export const scales = { x: scale, y: scale };
+
+export const lineChartOptions = {
+  plugins: {
+    legend: {
+      position: "bottom",
+      labels: { color },
+    },
+  },
+  scales,
+};

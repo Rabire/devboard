@@ -11,7 +11,7 @@ import { Line } from "react-chartjs-2";
 import FilterButton from "./FilterButton";
 import { LAST_MONTHS } from "../static/calendar";
 import useIssuesChart from "../hooks/useIssuesChart";
-import { color, scales } from "../static/chart-options";
+import { lineChartOptions } from "../static/chart-options";
 
 ChartJS.register(
   CategoryScale,
@@ -21,16 +21,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-const options = {
-  plugins: {
-    legend: {
-      position: "bottom",
-      labels: { color },
-    },
-  },
-  scales,
-};
 
 const IssuesChart = () => {
   const { datasets, allStats, setAllStats } = useIssuesChart();
@@ -60,7 +50,7 @@ const IssuesChart = () => {
         />
       </div>
 
-      <Line options={options} data={data} />
+      <Line options={lineChartOptions} data={data} />
     </section>
   );
 };
