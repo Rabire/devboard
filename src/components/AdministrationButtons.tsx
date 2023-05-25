@@ -1,7 +1,9 @@
 const AdministrationButtons = () => (
-  <div className="space-y-2.5">
-    <button className="btn">Devis et factures</button>
+  <div className="grid grid-cols-2 grid-rows-2 gap-2.5">
+    <button className="btn">Devis</button>
+    <button className="btn">Factures</button>
     <button className="btn">Mes clients</button>
+    <button className="btn">Opportunités</button>
   </div>
 );
 

@@ -1,32 +1,25 @@
-import cn from "classnames";
 import generateFile from "../utils/faker/files";
 import getFileIcon from "../utils/files";
 
 const files = Array.from({ length: 20 }, generateFile);
 
-const FilesSlider = () => (
-  <section className="flex overflow-x-scroll items-center">
-    <h2 className="mr-5">
-      Mes
-      <br />
-      fichiers
-    </h2>
+// TODO: add search feature
 
-    {files.map((file) => (
-      <button
-        key={file.name}
-        className={cn(
-          "w-28 flex flex-col items-center",
-          "px-4 border-white",
-          "relative group"
-        )}
-      >
-        {getFileIcon(file.extention)}
-        <p className="absolute -bottom-6 left-1/2 -translate-x-1/2 hidden group-hover:block">
+const FilesSlider = () => (
+  <section className="p-0 overflow-scroll relative">
+    <h2 className="p-5 sticky top-0 bg-secondary">Mes fichiers</h2>
+
+    <div className="grid grid-cols-3 gap-5 px-5 ">
+      {files.map((file) => (
+        <button
+          key={file.name}
+          className="overflow-hidden flex flex-col items-center gap-2"
+        >
+          {getFileIcon(file.extention)}
           {file.name}
-        </p>
-      </button>
-    ))}
+        </button>
+      ))}
+    </div>
   </section>
 );
 

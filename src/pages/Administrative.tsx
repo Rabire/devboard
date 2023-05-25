@@ -17,10 +17,12 @@ const Administrative = () => (
         percentage={faker.number.int(100)}
         deadline={endOfYear(new Date())}
       />
+
       <AdministrationButtons />
 
       <DoughnutSection />
       <IncomeAndSpendsChart />
+
       <FilesSlider />
       <DoughnutSection />
     </div>
