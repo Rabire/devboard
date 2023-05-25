@@ -1,10 +1,11 @@
 import { faker } from "@faker-js/faker";
 import { endOfYear } from "date-fns";
 import ProgressBarSection from "../components/ProgressBarSection";
+import ExpensesSection from "../components/ExpensesSection";
 
 const Administrative = () => (
   <main className="grid-cols-[6fr_3fr] gap-5">
-    <div className="grid grid-rows-[2fr_1fr_2fr_1fr] grid-cols-2 gap-5">
+    <div className="grid grid-rows-[2fr_1fr_2fr_1fr] grid-cols-2 gap-5 max-h-content">
       <section>Revenus par clients</section>
       <section>Chiffre d’affaire</section>
 
@@ -22,9 +23,9 @@ const Administrative = () => (
       <section className="col-span-2">Fichiers</section>
     </div>
 
-    <div className="flex flex-col  gap-5">
+    <div className="flex flex-col gap-5 max-h-content">
       <section>CB-Solde</section>
-      <section className="flex-1">Dépenses</section>
+      <ExpensesSection />
     </div>
   </main>
 );

@@ -43,3 +43,9 @@ export type Task = {
   isDone: boolean;
   completedAt?: Date;
 };
+
+export type Expense = {
+  description: string;
+  amount: string;
+  date: Date;
+};
