@@ -44,3 +44,8 @@ section {
     @apply border-l-2 border-light dark:border-dark pl-2;
   }
 }
+
+.btn {
+  @apply p-5 txt-title bg-secondary rounded-2xl border-[1px] border-black dark:border-white;
+  @apply items-center justify-center flex w-full;
+}

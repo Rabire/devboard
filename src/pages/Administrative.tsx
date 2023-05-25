@@ -3,6 +3,7 @@ import { endOfYear } from "date-fns";
 import ProgressBarSection from "../components/ProgressBarSection";
 import ExpensesSection from "../components/ExpensesSection";
 import CreditCard from "../components/CreditCard";
+import AdministrationButtons from "../components/AdministrationButtons";
 
 const Administrative = () => (
   <main className="grid-cols-[6fr_3fr] gap-5">
@@ -11,7 +12,7 @@ const Administrative = () => (
       <section>Chiffre d’affaire</section>
 
       <div className="col-span-2 grid grid-cols-[2fr_4fr] gap-5">
-        <section>Buttons</section>
+        <AdministrationButtons />
         <ProgressBarSection
           subTitle="Objectifs"
           title="Semestre 2 - 65 000€"
