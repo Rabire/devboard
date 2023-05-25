@@ -24,7 +24,7 @@ const NotesTakingSection = () => {
         />
       ) : (
         <div
-          className="md px-5 overflow-scroll"
+          className="md px-5 overflow-scroll h-full"
           onClick={handleFocus}
           dangerouslySetInnerHTML={{ __html: md.render(text) }}
         ></div>
