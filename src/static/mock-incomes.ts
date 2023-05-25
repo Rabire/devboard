@@ -1,3 +1,7 @@
-const TURNOVER_LABELS = ["Factures impayées", "Factures payées", "Devis émis"];
+export const CLIENTS = ["Decathlon", "Snap inc.", "Mozilla"];
 
-export default TURNOVER_LABELS;
+export const TURNOVER_LABELS = [
+  "Factures impayées",
+  "Factures payées",
+  "Devis émis",
+];

@@ -16,13 +16,19 @@ const options = {
   borderWidth: 0,
 };
 
-const DoughnutSection = () => {
-  const { year, setYear, data } = useDoughnutChart();
+type Props = {
+  type: "incomes" | "turnover";
+};
+
+const DoughnutSection = ({ type }: Props) => {
+  const { year, setYear, data } = useDoughnutChart(type);
 
   return (
     <section>
       <div className="flex justify-between items-end mb-5">
-        <h2>Chiffre d’affaire</h2>
+        <h2>
+          {type === "incomes" ? "Revenus par clients" : "Chiffre d’affaire"}
+        </h2>
         <FilterButton
           buttons={[
             {

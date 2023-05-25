@@ -20,11 +20,11 @@ const Administrative = () => (
 
       <AdministrationButtons />
 
-      <DoughnutSection />
+      <DoughnutSection type="incomes" />
       <IncomeAndSpendsChart />
 
       <FilesSlider />
-      <DoughnutSection />
+      <DoughnutSection type="turnover" />
     </div>
 
     <div className="flex flex-col gap-5 max-h-content">
