@@ -4,6 +4,7 @@ import ProgressBarSection from "../components/ProgressBarSection";
 import ExpensesSection from "../components/ExpensesSection";
 import CreditCard from "../components/CreditCard";
 import AdministrationButtons from "../components/AdministrationButtons";
+import FilesSlider from "../components/FilesSlider";
 
 const Administrative = () => (
   <main className="grid-cols-[6fr_3fr] gap-5">
@@ -22,7 +23,7 @@ const Administrative = () => (
       </div>
 
       <section className="col-span-2">Revenus et dépenses</section>
-      <section className="col-span-2">Fichiers</section>
+      <FilesSlider />
     </div>
 
     <div className="flex flex-col gap-5 max-h-content">
