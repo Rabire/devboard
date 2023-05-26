@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { settings } from "../stores/theme";
+import { $settings } from "../stores/theme";
 
 export const updateDom = () => {
-  const { mode, theme } = settings.get();
+  const { mode, theme } = $settings.get();
 
   if (mode === "dark") {
     document.documentElement.classList.add("dark");

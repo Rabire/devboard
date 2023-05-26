@@ -1,9 +1,9 @@
 import { useStore } from "@nanostores/react";
 import Swiper from "./Swiper";
-import { project, swipeProject } from "../stores/technical";
+import { $project, swipeProject } from "../stores/technical";
 
 const ProjectsSwiper = () => {
-  const currentProject = useStore(project);
+  const currentProject = useStore($project);
 
   return (
     <section className=" flex flex-col justify-center rounded-lg">

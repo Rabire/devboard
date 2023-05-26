@@ -1,14 +1,11 @@
 import { useStore } from "@nanostores/react";
 import { eachHourOfInterval, format, set } from "date-fns";
-import {
-  selectedDay as selectedDayStore,
-  selectedDayActivities,
-} from "../stores/productivity";
+import { $selectedDay, selectedDayActivities } from "../stores/productivity";
 import NotificationIcon from "./svg/NotificationIcon";
 import ActivityCard from "./ActivityCard";
 
 const BulletJournal = () => {
-  const selectedDay = useStore(selectedDayStore);
+  const selectedDay = useStore($selectedDay);
   const activities = useStore(selectedDayActivities);
 
   const hours = eachHourOfInterval({

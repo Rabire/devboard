@@ -6,17 +6,17 @@ export type SettingsValue = {
   mode: "dark" | "light";
 };
 
-export const settings = persistentMap<SettingsValue>("settings:", {
+export const $settings = persistentMap<SettingsValue>("settings:", {
   theme: "#86B1F9",
   mode: window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light",
 });
 
-settings.listen(updateDom);
+$settings.listen(updateDom);
 
 export const switchMode = () =>
-  settings.setKey("mode", settings.get().mode === "dark" ? "light" : "dark");
+  $settings.setKey("mode", $settings.get().mode === "dark" ? "light" : "dark");
 
 export const setTheme = (newTheme: string) =>
-  settings.setKey("theme", newTheme);
+  $settings.setKey("theme", newTheme);

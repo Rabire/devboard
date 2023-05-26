@@ -9,11 +9,11 @@ import {
   Legend,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
-import { settings } from "../stores/theme";
+import { $settings } from "../stores/theme";
 import { color } from "../static/chart-options";
 import THEME_COLORS from "../utils/tailwing-config";
 
-const { theme, mode } = settings.get();
+const { theme, mode } = $settings.get();
 
 const OPTIONS = {
   plugins: { legend: { display: false } },

@@ -11,17 +11,14 @@ import {
 import cn from "classnames";
 import { useStore } from "@nanostores/react";
 import Swiper from "./Swiper";
-import {
-  selectedDay as selectedDayStore,
-  setSelectedDay,
-} from "../stores/productivity";
+import { $selectedDay, setSelectedDay } from "../stores/productivity";
 import { WEEK_DAYS } from "../static/calendar";
 
 const today = startOfToday();
 
 const Calendar = () => {
   const [month, setMonth] = useState(today);
-  const selectedDay = useStore(selectedDayStore);
+  const selectedDay = useStore($selectedDay);
 
   const days = eachDayOfInterval({
     start: startOfMonth(month),

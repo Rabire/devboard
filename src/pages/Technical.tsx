@@ -1,7 +1,7 @@
 import { useStore } from "@nanostores/react";
 import cn from "classnames";
 import ProgressBarSection from "../components/ProgressBarSection";
-import { project } from "../stores/technical";
+import { $project } from "../stores/technical";
 import ProjectsSwiper from "../components/ProjectsSwiper";
 import PullRequestSection from "../components/PullRequestSection";
 import CodeBaseChart from "../components/CodeBaseChart";
@@ -10,7 +10,7 @@ import TeamSection from "../components/TeamSection";
 import IssuesChart from "../components/IssuesChart";
 
 const Technical = () => {
-  const { sprints } = useStore(project);
+  const { sprints } = useStore($project);
 
   const currentProject = sprints[0];
 

@@ -2,14 +2,14 @@ import { useEffect, useRef } from "react";
 import cn from "classnames";
 import { useStore } from "@nanostores/react";
 import THEME_COLORS from "../utils/tailwing-config";
-import { setTheme, settings, switchMode } from "../stores/theme";
+import { setTheme, $settings, switchMode } from "../stores/theme";
 
 const COLORS: string[] = Object.values(THEME_COLORS.theme);
 
 type Props = { close: () => void; isOpen: boolean };
 
 const OptionsDialog = ({ close, isOpen }: Props) => {
-  const { mode, theme } = useStore(settings);
+  const { mode, theme } = useStore($settings);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

@@ -1,14 +1,14 @@
 import { eachDayOfInterval, isSaturday, isSunday, set } from "date-fns";
 import { faker } from "@faker-js/faker";
 import { Activity, Slot } from "../types";
-import { project as projectStore } from "../../stores/technical";
+import { $project } from "../../stores/technical";
 import {
   AM_SLOTS,
   MOCK_ACTIVITIES,
   PM_SLOTS,
 } from "../../static/mock-activities";
 
-const project = projectStore.get();
+const project = $project.get();
 
 const generateSlotActivity = (day: Date, slot: Slot) => {
   const activity: Activity = {
