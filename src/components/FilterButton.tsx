@@ -16,9 +16,9 @@ const FilterButton = ({ buttons }: Props) => (
       <button
         key={button.label}
         onClick={button.onClick}
-        // className={`px-1 ${button.isActive && "txt-active"}`}
         className={cn("px-1", {
-          "bg-current-theme font-semibold rounded-full px-2": button.isActive,
+          "bg-current-theme font-semibold text-black rounded-full px-2":
+            button.isActive,
         })}
       >
         {button.label}
