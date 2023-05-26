@@ -46,7 +46,7 @@ section {
 }
 
 .btn {
-  @apply p-5 text-lg bg-secondary rounded-2xl border-[1px] border-black dark:border-white;
+  @apply p-5 text-lg bg-secondary rounded-lg border-[1px] border-black dark:border-white;
   @apply items-center justify-center flex w-full;
   @apply hover:bg-current-theme hover:text-black hover:font-bold transition-colors;
 }
