@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { faker } from "@faker-js/faker";
+import { useStore } from "@nanostores/react";
 import { LAST_MONTHS, LAST_WEEKS } from "../static/calendar";
 import { $settings } from "../stores/theme";
 import THEME_COLORS from "../utils/tailwing-config";
@@ -7,7 +8,7 @@ import projects from "../utils/projects";
 
 const useProductivityChart = () => {
   const [isWeek, setIsWeek] = useState(false);
-  const { theme } = $settings.get();
+  const { theme } = useStore($settings);
 
   const tasksDatasets = [
     {
