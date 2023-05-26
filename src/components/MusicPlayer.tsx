@@ -2,7 +2,7 @@ import PauseIcon from "./svg/PauseIcon";
 import SkipMusicIcon from "./svg/SkipMusicIcon";
 
 const MusicPlayer = () => (
-  <section className="flex gap-5 items-center">
+  <section className="flex min-h-[150px] gap-5 items-center">
     <button className="album">
       <PauseIcon />
     </button>

@@ -36,7 +36,7 @@ const TimeChart = () => {
   };
 
   return (
-    <section className="flex gap-5 flex-col justify-around">
+    <section className="flex flex-1 gap-5 flex-col justify-around">
       <div className="flex justify-between items-end">
         <h2>Heures travaillées</h2>
         <FilterButton
