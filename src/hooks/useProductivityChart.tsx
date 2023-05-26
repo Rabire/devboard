@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { faker } from "@faker-js/faker";
-import { useStore } from "@nanostores/react";
-import { activities as activitiesStore } from "../stores/productivity";
 import { LAST_MONTHS, LAST_WEEKS } from "../static/calendar";
 import { settings } from "../stores/theme";
 import THEME_COLORS from "../utils/tailwing-config";
+import projects from "../utils/projects";
 
 const useProductivityChart = () => {
   const [isWeek, setIsWeek] = useState(false);
-  const activities = useStore(activitiesStore);
   const { theme } = settings.get();
 
   const tasksDatasets = [
@@ -19,9 +17,7 @@ const useProductivityChart = () => {
     },
   ];
 
-  const activitiesDatasets = [
-    ...new Set(activities.map((act) => act.project)),
-  ].map((project, i) => ({
+  const activitiesDatasets = projects.map((project, i) => ({
     label: project.title,
     data: isWeek
       ? LAST_WEEKS.map(() => faker.number.int(12))

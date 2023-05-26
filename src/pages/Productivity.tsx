@@ -2,8 +2,9 @@ import cn from "classnames";
 import BulletJournal from "../components/BulletJournal";
 import Calendar from "../components/Calendar";
 import MusicPlayer from "../components/MusicPlayer";
-import ProductivityCharts from "../components/ProductivityCharts";
+import TimeChart from "../components/TimeChart";
 import TodoList from "../components/TodoList";
+import TasksChart from "../components/TasksChart";
 
 const Productivity = () => (
   <main>
@@ -11,9 +12,10 @@ const Productivity = () => (
     <TodoList />
 
     {/* tablet:right desktop:middle */}
-    <div className="grid grid-rows-[1fr_4fr] gap-5 tablet:max-h-content">
+    <div className="grid grid-rows-[1fr_2fr_2fr] gap-5 tablet:max-h-content">
       <MusicPlayer />
-      <ProductivityCharts />
+      <TimeChart />
+      <TasksChart />
     </div>
 
     {/* tablet:full-width desktop:right */}

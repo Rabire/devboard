@@ -15,12 +15,6 @@ import { color, scales } from "../static/chart-options";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
-const TASKS_OPTIONS = {
-  indexAxis: "y",
-  plugins: { legend: { display: false } },
-  scales,
-}; // TODO: type this
-
 const ACTIVITIES_OPTIONS = {
   plugins: {
     legend: {
@@ -29,16 +23,10 @@ const ACTIVITIES_OPTIONS = {
     },
   },
   scales,
-}; // TODO: type this
+};
 
-const ProductivityCharts = () => {
-  const { isWeek, setIsWeek, activitiesDatasets, tasksDatasets } =
-    useProductivityChart();
-
-  const tasksData: ChartData<"bar"> = {
-    labels: isWeek ? LAST_WEEKS : LAST_MONTHS,
-    datasets: tasksDatasets,
-  };
+const TimeChart = () => {
+  const { isWeek, activitiesDatasets, setIsWeek } = useProductivityChart();
 
   const projectsData: ChartData<"bar"> = {
     labels: isWeek ? LAST_WEEKS : LAST_MONTHS,
@@ -46,13 +34,16 @@ const ProductivityCharts = () => {
   };
 
   return (
-    <section className="space-y-2.5">
-      {/* Header */}
+    <section className="flex gap-5 flex-col justify-around">
       <div className="flex justify-between items-end">
-        <h2>Tâches terminées</h2>
+        <h2>Heures travaillées</h2>
         <FilterButton
           buttons={[
-            { label: "Week", onClick: () => setIsWeek(true), isActive: isWeek },
+            {
+              label: "Week",
+              onClick: () => setIsWeek(true),
+              isActive: isWeek,
+            },
             {
               label: "Month",
               onClick: () => setIsWeek(false),
@@ -62,13 +53,13 @@ const ProductivityCharts = () => {
         />
       </div>
 
-      {/* Chart */}
-      <Bar options={TASKS_OPTIONS} data={tasksData} />
-
-      <h2>Heures travaillées</h2>
-      <Bar options={ACTIVITIES_OPTIONS} data={projectsData} />
+      <Bar
+        className="max-h-[150px]"
+        options={ACTIVITIES_OPTIONS}
+        data={projectsData}
+      />
     </section>
   );
 };
 
-export default ProductivityCharts;
+export default TimeChart;
