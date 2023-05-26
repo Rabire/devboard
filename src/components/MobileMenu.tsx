@@ -8,16 +8,32 @@ import MenuModal from "./MenuModal";
 
 const MobileMenu = () => {
   const [showModal, setShowModal] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const location = useLocation();
 
   useEffect(() => setShowModal(false), [location]);
+
+  let prevScrollPos = window.pageYOffset;
+
+  window.onscroll = () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (Math.abs(prevScrollPos - currentScrollPos) > 100) {
+      setIsVisible(prevScrollPos > currentScrollPos);
+      setShowModal(false);
+      prevScrollPos = currentScrollPos;
+    }
+  };
+
+  if (!isVisible) return null;
 
   return (
     <>
       <button
         onClick={() => setShowModal(true)}
         className={cn(
+          "border-2 border-light-secondary dark:border-dark-secondary",
           "fixed right-1/2 translate-x-1/2 top-[15px] z-40",
           "bg-black rounded-full w-14 aspect-square",
           "dark:bg-white tablet:hidden",

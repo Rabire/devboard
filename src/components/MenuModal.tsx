@@ -9,12 +9,12 @@ const MenuModal = ({ closeModal }: Props) => (
   <>
     {/* Overlay */}
     <div
-      className="h-screen absolute inset-0 bg-black/70 z-50"
+      className="h-screen sticky inset-0 bg-black/70 z-50"
       onClick={closeModal}
     />
 
     {/* Modal */}
-    <div className="bg-secondary p-8 dark:text-white drop-shadow-xl absolute inset-0 left-auto z-50">
+    <div className="bg-secondary fixed p-8 dark:text-white drop-shadow-xl inset-0 left-auto z-50">
       <div className="flex flex-col gap-3 text-2xl h-full">
         <button className="mb-16 flex justify-end" onClick={closeModal}>
           <ExitCrossIcon />
