@@ -37,7 +37,6 @@ export default {
     screens: {
       tablet: "640px", // screens bellow 640px
       desktop: "1280px", // screens bellow 1280px
-      large: "1439px", // screens bellow 1439px
     },
   },
   plugins: [],
