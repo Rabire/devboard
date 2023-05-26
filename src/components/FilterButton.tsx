@@ -11,12 +11,12 @@ type Props = {
 };
 
 const FilterButton = ({ buttons }: Props) => (
-  <div className="text-xs">
+  <div className="text-xs flex items-end gap-1">
     {buttons.map((button) => (
       <button
         key={button.label}
         onClick={button.onClick}
-        className={cn("px-1", {
+        className={cn("p-1", {
           "bg-current-theme font-semibold text-black rounded-full px-2":
             button.isActive,
         })}

@@ -3,8 +3,8 @@ import PRStatusList from "./PRStatusList";
 
 // TODO: header fixed
 const PullRequestSection = () => (
-  <section className="desktop:overflow-y-scroll">
-    <h2 className="mb-2.5">Mes pull-requests</h2>
+  <section className="desktop:overflow-y-scroll p-0">
+    <h2 className="section-header">Mes pull-requests</h2>
 
     <PRStatusList status={PRStatus.Ready} />
     <PRStatusList status={PRStatus.Pending} />

@@ -19,7 +19,7 @@ const BulletJournal = () => {
   return (
     <section className="tablet:overflow-y-scroll flex-1 bg-secondary rounded-2xl p-0">
       {/* Header */}
-      <div className="flex justify-between sticky top-0 bg-secondary p-5 z-20 mb-2.5">
+      <div className="section-header mb-2.5">
         <h2>Bullet journal</h2>
         <button>
           <NotificationIcon />

@@ -10,7 +10,7 @@ const TodoList = () => {
   return (
     <section className="tablet:overflow-y-scroll bg-secondary p-0 tablet:max-h-content">
       {/* Header */}
-      <div className="flex justify-between items-end sticky top-0 right-0 left-0 bg-secondary p-5 z-10 gap-5">
+      <div className="section-header">
         <div className="txt-title flex gap-2.5 items-center">
           <h2>Mes tâches</h2>
           <button className="bg-black dark:bg-white text-white h-[20px] min-w-[20px] flex items-center justify-center rounded-full">

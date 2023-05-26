@@ -13,7 +13,7 @@ const PRStatusList = ({ status }: Props) => {
     PRs().find((ctg) => ctg.status === status)?.pullRequests || [];
 
   return (
-    <div className="flex gap-5 border-bottom py-2.5">
+    <div className="flex gap-5 border-bottom py-2.5 mx-5">
       <div className="min-w-[25px]">
         {status === PRStatus.Ready && <GhReadyIcon />}
         {status === PRStatus.Pending && <GhPendingIcon />}
