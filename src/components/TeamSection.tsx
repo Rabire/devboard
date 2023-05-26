@@ -2,7 +2,7 @@ import { membersSprints, teams } from "../stores/technical";
 import AvatarGroup from "./AvatarGroup";
 
 const TeamSection = () => (
-  <section className="overflow-scroll">
+  <section className="tablet:overflow-scroll">
     <h2>Équipes</h2>
     <div className="space-y-2.5 mt-2.5 mb-5">
       {teams.get().map((team) => (

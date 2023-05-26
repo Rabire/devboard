@@ -67,8 +67,8 @@ const CodeBaseChart = () => {
 
   return (
     <section>
-      <h2>Codebase actuelle</h2>
-      <Radar options={OPTIONS} data={data} />
+      <h2 className="mb-5">Codebase actuelle</h2>
+      <Radar className="max-h-[300px]" options={OPTIONS} data={data} />
     </section>
   );
 };

@@ -10,7 +10,7 @@ const NotesTakingSection = () => {
   const handleFocus = () => setFocused(true);
 
   return (
-    <section className="overflow-y-scroll p-0 relative flex-1">
+    <section className="overflow-y-scroll p-0 relative flex-1 flex flex-col">
       <h2 className="p-5 sticky top-0 bg-secondary">Notes rapides</h2>
 
       {focused ? (
@@ -24,7 +24,7 @@ const NotesTakingSection = () => {
         />
       ) : (
         <div
-          className="md px-5 overflow-scroll h-full"
+          className="markdown px-5 overflow-scroll flex-1"
           onClick={handleFocus}
           dangerouslySetInnerHTML={{ __html: md.render(text) }}
         ></div>

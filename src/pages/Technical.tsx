@@ -1,4 +1,5 @@
 import { useStore } from "@nanostores/react";
+import cn from "classnames";
 import ProgressBarSection from "../components/ProgressBarSection";
 import { project } from "../stores/technical";
 import ProjectsSwiper from "../components/ProjectsSwiper";
@@ -14,9 +15,9 @@ const Technical = () => {
   const currentProject = sprints[0];
 
   return (
-    <main className="grid-cols-3">
-      {/* Left */}
-      <div className="grid grid-rows-[1fr_2fr_5fr] gap-5 max-h-content">
+    <main>
+      {/* left */}
+      <div className="flex flex-col tablet:grid grid-rows-[1fr_2fr_5fr] gap-5 tablet:max-h-content">
         <ProjectsSwiper />
         <ProgressBarSection
           title={currentProject.name}
@@ -27,14 +28,21 @@ const Technical = () => {
         <TeamSection />
       </div>
 
-      {/* Middle */}
-      <div className="gap-5 flex flex-col max-h-content">
+      {/* tablet:left desktop:middle */}
+      <div className="flex flex-col gap-5 max-h-content">
         <NotesTakingSection />
         <IssuesChart />
       </div>
 
-      {/* Right */}
-      <div className="grid grid-rows-[auto_1fr] gap-5 max-h-content">
+      {/* tablet:full-width desktop:right */}
+      <div
+        className={cn(
+          "flex flex-col tablet:grid grid-rows-[auto_1fr]",
+          "gap-x-5 desktop:gap-y-5 desktop:max-h-content",
+          "tablet:grid-cols-2 desktop:grid-cols-1",
+          "tablet:col-span-2 desktop:col-span-1"
+        )}
+      >
         <PullRequestSection />
         <CodeBaseChart />
       </div>

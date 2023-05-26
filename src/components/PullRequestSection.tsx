@@ -1,9 +1,10 @@
 import PRStatus from "../utils/enums";
 import PRStatusList from "./PRStatusList";
 
+// TODO: header fixed
 const PullRequestSection = () => (
-  <section className="overflow-y-scroll">
-    <h2>Mes pull-requests</h2>
+  <section className="desktop:overflow-y-scroll">
+    <h2 className="mb-2.5">Mes pull-requests</h2>
 
     <PRStatusList status={PRStatus.Ready} />
     <PRStatusList status={PRStatus.Pending} />
