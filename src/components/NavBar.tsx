@@ -5,10 +5,10 @@ import DevBoardLogo from "./svg/DevBoardLogo";
 import OptionsIcon from "./svg/OptionsIcon";
 
 const NavBar = () => (
-  <>
+  <div className="h-full ">
     <nav
       className={cn(
-        "hidden tablet:flex fixed max-h-content",
+        "hidden tablet:flex sticky top-5 max-h-content",
         "bg-light-secondary dark:bg-dark-secondary rounded-2xl",
         "flex-col justify-between items-center py-12 px-5"
       )}
@@ -28,9 +28,7 @@ const NavBar = () => (
 
       <button className="text-xs w-full">Disconnect</button>
     </nav>
-
-    <div></div>
-  </>
+  </div>
 );
 
 export default NavBar;
