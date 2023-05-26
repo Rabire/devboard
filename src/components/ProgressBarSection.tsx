@@ -14,10 +14,11 @@ const ProgressBarSection = ({
   percentage,
   deadline,
 }: Props) => (
-  <section>
+  <section className="flex flex-col justify-center">
     <p className="opacity-50 mb-1">{subTitle}</p>
     <h2 className="mb-4">{title}</h2>
     <div>
+      {/* ProgressBar */}
       <div className="h-2 w-full bg rounded-full overflow-hidden relative">
         <span
           className="bg-current-theme inset-0 absolute"
