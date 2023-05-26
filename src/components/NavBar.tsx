@@ -28,11 +28,12 @@ const NavBar = () => {
           ))}
 
           <div className="relative">
-            <button onClick={() => setShowOptions((prev) => !prev)}>
+            <button onClick={() => setShowOptions(true)}>
               <OptionsIcon />
             </button>
             {showOptions && (
               <OptionsDialog
+                isDialog
                 close={() => setShowOptions(false)}
                 isOpen={showOptions}
               />
