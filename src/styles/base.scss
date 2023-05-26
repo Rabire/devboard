@@ -21,16 +21,19 @@
   }
 
   #root {
-    @apply min-h-screen max-w-screen-2xl mx-auto p-5;
-    @apply lg:grid grid-cols-[1fr_9fr] gap-5;
+    @apply min-h-screen max-w-[1440px] mx-auto p-5;
+    @apply tablet:grid tablet:grid-cols-[1fr_9fr] desktop:grid-cols-[1fr_8fr] gap-5;
   }
 
   .max-h-content {
-    max-height: var(--content-height);
+    // TODO: rename all max-h-content by h-content
+    height: var(--content-height);
   }
 
   main {
-    @apply flex flex-col lg:grid gap-5 max-h-content;
+    @apply flex flex-col gap-5;
+    @apply tablet:grid tablet:grid-cols-2;
+    @apply desktop:grid-cols-3 desktop:max-h-content;
   }
 
   h2 {

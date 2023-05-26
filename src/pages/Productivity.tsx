@@ -1,28 +1,32 @@
+import cn from "classnames";
 import BulletJournal from "../components/BulletJournal";
 import Calendar from "../components/Calendar";
 import MusicPlayer from "../components/MusicPlayer";
 import ProductivityCharts from "../components/ProductivityCharts";
-import PromotionSlider from "../components/PromotionSlider";
 import TodoList from "../components/TodoList";
 
 const Productivity = () => (
-  <main className="grid-cols-3 grid-rows-[5fr_1fr]">
+  <main>
     {/* Left */}
     <TodoList />
 
-    {/* Middle */}
-    <div className="grid grid-rows-[1fr_4fr] gap-5">
+    {/* tablet:right desktop:middle */}
+    <div className="grid grid-rows-[1fr_4fr] gap-5 tablet:max-h-content">
       <MusicPlayer />
       <ProductivityCharts />
     </div>
 
-    {/* Right */}
-    <div className="row-span-2 grid gap-5 grid-rows-[auto_1fr]">
+    {/* tablet:full-width desktop:right */}
+    <div
+      className={cn(
+        "flex flex-col gap-5 max-h-content",
+        "tablet:col-span-2 tablet:grid tablet:grid-cols-2 tablet:max-h-[300px]",
+        "desktop:col-span-1 desktop:flex desktop:max-h-none"
+      )}
+    >
       <Calendar />
       <BulletJournal />
     </div>
-
-    <PromotionSlider />
   </main>
 );
 

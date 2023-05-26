@@ -20,7 +20,7 @@ const MobileMenu = () => {
         className={cn(
           "fixed right-1/2 translate-x-1/2 top-[15px] z-40",
           "bg-black rounded-full w-14 aspect-square",
-          "dark:bg-white lg:hidden",
+          "dark:bg-white tablet:hidden",
           "flex items-center justify-center"
         )}
       >

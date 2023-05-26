@@ -8,7 +8,7 @@ const TodoList = () => {
   const [filter, setFilter] = useState<"todo" | "done" | "all">("all");
 
   return (
-    <section className="lg:overflow-y-scroll bg-secondary p-0">
+    <section className="tablet:overflow-y-scroll bg-secondary p-0 tablet:max-h-content">
       {/* Header */}
       <div className="flex justify-between items-end sticky top-0 right-0 left-0 bg-secondary p-5 z-10 gap-5">
         <div className="txt-title flex gap-2.5 items-center">
