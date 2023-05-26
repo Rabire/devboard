@@ -20,9 +20,6 @@ const MOCK_TASKS = [
     description: "Clean code",
   },
   {
-    title: "Mettre à jour mon profile Malt",
-  },
-  {
     title: "Prendre RDV chez le dentiste",
   },
   {
@@ -54,11 +51,7 @@ const MOCK_TASKS = [
     description: "Page 'Mes annimaux'",
   },
   {
-    title: "R&D Chatbox",
-    description: "Utiliser socketIO ?",
-  },
-  {
-    title: "R&D Chaing avec NextJS",
+    title: "R&D API avec NestJS",
   },
   {
     title: "R&D Chatbox",

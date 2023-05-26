@@ -9,7 +9,7 @@ const TodoTask = ({ task }: Props) => (
   <div className="py-5 flex gap-2.5 border-bottom items-center relative group">
     <input
       type="checkbox"
-      checked={task.isDone}
+      defaultChecked={task.isDone}
       className={cn(
         "appearance-none h-5 aspect-square border-[1px] rounded-full border-black dark:border-light relative",
         "checked:bg-current-theme checked:border-0",
