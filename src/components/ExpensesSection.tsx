@@ -5,7 +5,7 @@ const expenses = Array.from({ length: 50 }, generateExpense).sort(
   (a, b) => b.date.getTime() - a.date.getTime()
 );
 const ExpensesSection = () => (
-  <section className="row-span-3 overflow-scroll p-0 relative">
+  <section className="desktop:row-span-3 overflow-scroll p-0 relative max-h-content">
     <h2 className="section-header">Relevé de compte</h2>
 
     <div className="px-5">

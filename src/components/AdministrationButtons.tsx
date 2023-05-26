@@ -9,7 +9,7 @@ const AdministrationButtons = () => (
 
     <div className="bg-current-theme p-5 col-span-2 border-spacing-2 rounded-lg text-black">
       <h2>Devennez DevBoard+</h2>
-      <p>Franchissez le pas de la productivité. 20 jours offerts !</p>
+      <p>Franchissez le pas de la productivité !</p>
     </div>
   </div>
 );

@@ -19,8 +19,10 @@ const Administrative = () => (
 
     <ExpensesSection />
 
-    <DoughnutSection type="incomes" />
-    <DoughnutSection type="turnover" />
+    <div className="grid gap-5 desktop:grid-cols-2 tablet:col-span-1 desktop:col-span-2 top-0">
+      <DoughnutSection type="incomes" />
+      <DoughnutSection type="turnover" />
+    </div>
 
     <IncomeAndSpendsChart />
     <AdministrationButtons />
