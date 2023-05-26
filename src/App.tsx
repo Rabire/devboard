@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import MobileMenu from "./components/MobileMenu";
 import NavBar from "./components/NavBar";
-import useDefaultMode from "./hooks/useDefaultMode";
+import useSettings from "./hooks/useSettings";
 
 const Productivity = lazy(() => import("./pages/Productivity"));
 const Administrative = lazy(() => import("./pages/Administrative"));
@@ -11,7 +11,7 @@ const Technical = lazy(() => import("./pages/Technical"));
 // TODO: add suspense while loading page
 
 function App() {
-  useDefaultMode();
+  useSettings();
 
   return (
     <>

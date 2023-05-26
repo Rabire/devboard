@@ -1,20 +1,22 @@
 import { useEffect } from "react";
 import { settings } from "../stores/theme";
 
-export const updateDomMode = () => {
-  const { mode } = settings.get();
+export const updateDom = () => {
+  const { mode, theme } = settings.get();
 
   if (mode === "dark") {
     document.documentElement.classList.add("dark");
   } else {
     document.documentElement.classList.remove("dark");
   }
+
+  document.documentElement.style.setProperty("--current-theme", theme);
 };
 
-const useDefaultMode = () => {
+const useSettings = () => {
   useEffect(() => {
-    updateDomMode();
+    updateDom();
   }, []);
 };
 
-export default useDefaultMode;
+export default useSettings;
