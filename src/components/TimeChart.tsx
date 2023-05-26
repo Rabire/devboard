@@ -11,26 +11,28 @@ import { Bar } from "react-chartjs-2";
 import FilterButton from "./FilterButton";
 import useProductivityChart from "../hooks/useProductivityChart";
 import { LAST_MONTHS, LAST_WEEKS } from "../static/calendar";
-import { color, scales } from "../static/chart-options";
+import useChartOptions from "../hooks/useChartOptions";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
-
-const ACTIVITIES_OPTIONS = {
-  plugins: {
-    legend: {
-      position: "bottom",
-      labels: { color },
-    },
-  },
-  scales,
-};
 
 const TimeChart = () => {
   const { isWeek, activitiesDatasets, setIsWeek } = useProductivityChart();
 
+  const { color, scales } = useChartOptions();
+
   const projectsData: ChartData<"bar"> = {
     labels: isWeek ? LAST_WEEKS : LAST_MONTHS,
     datasets: activitiesDatasets,
+  };
+
+  const options = {
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: { color },
+      },
+    },
+    scales,
   };
 
   return (
@@ -53,11 +55,7 @@ const TimeChart = () => {
         />
       </div>
 
-      <Bar
-        className="max-h-[150px]"
-        options={ACTIVITIES_OPTIONS}
-        data={projectsData}
-      />
+      <Bar className="max-h-[150px]" options={options} data={projectsData} />
     </section>
   );
 };

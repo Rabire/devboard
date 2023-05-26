@@ -10,23 +10,25 @@ import {
 import { Bar } from "react-chartjs-2";
 import useProductivityChart from "../hooks/useProductivityChart";
 import FilterButton from "./FilterButton";
-import { scales } from "../static/chart-options";
 import { LAST_MONTHS, LAST_WEEKS } from "../static/calendar";
-
-const TASKS_OPTIONS = {
-  indexAxis: "y",
-  plugins: { legend: { display: false } },
-  scales,
-};
+import useChartOptions from "../hooks/useChartOptions";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 const TasksChart = () => {
   const { isWeek, setIsWeek, tasksDatasets } = useProductivityChart();
 
+  const { scales } = useChartOptions();
+
   const tasksData: ChartData<"bar"> = {
     labels: isWeek ? LAST_WEEKS : LAST_MONTHS,
     datasets: tasksDatasets,
+  };
+
+  const options = {
+    indexAxis: "y",
+    plugins: { legend: { display: false } },
+    scales,
   };
 
   return (
@@ -49,7 +51,7 @@ const TasksChart = () => {
         />
       </div>
 
-      <Bar className="max-h-[150px]" options={TASKS_OPTIONS} data={tasksData} />
+      <Bar className="max-h-[150px]" options={options} data={tasksData} />
     </section>
   );
 };

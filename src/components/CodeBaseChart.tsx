@@ -11,9 +11,9 @@ import {
 import { useStore } from "@nanostores/react";
 import { Radar } from "react-chartjs-2";
 import { $settings } from "../stores/theme";
-import { color } from "../static/chart-options";
 import THEME_COLORS from "../utils/tailwing-config";
 import LABELS from "../static/codebase";
+import useChartOptions from "../hooks/useChartOptions";
 
 ChartJS.register(
   RadialLinearScale,
@@ -26,6 +26,7 @@ ChartJS.register(
 
 const CodeBaseChart = () => {
   const { theme, mode } = useStore($settings);
+  const { color } = useChartOptions();
 
   const data = {
     labels: LABELS,

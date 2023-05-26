@@ -2,19 +2,9 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import FilterButton from "./FilterButton";
 import useDoughnutChart from "../hooks/useDoughnutChart";
-import { color } from "../static/chart-options";
+import useChartOptions from "../hooks/useChartOptions";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
-
-const options = {
-  plugins: {
-    legend: {
-      position: "right",
-      labels: { color },
-    },
-  },
-  borderWidth: 0,
-};
 
 type Props = {
   type: "incomes" | "turnover";
@@ -22,6 +12,17 @@ type Props = {
 
 const DoughnutSection = ({ type }: Props) => {
   const { year, setYear, data } = useDoughnutChart(type);
+  const { color } = useChartOptions();
+
+  const options = {
+    plugins: {
+      legend: {
+        position: "right",
+        labels: { color },
+      },
+    },
+    borderWidth: 0,
+  };
 
   return (
     <section>

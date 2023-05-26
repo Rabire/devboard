@@ -11,7 +11,7 @@ import { Line } from "react-chartjs-2";
 import FilterButton from "./FilterButton";
 import { LAST_MONTHS } from "../static/calendar";
 import useIssuesChart from "../hooks/useIssuesChart";
-import { lineChartOptions } from "../static/chart-options";
+import useChartOptions from "../hooks/useChartOptions";
 
 ChartJS.register(
   CategoryScale,
@@ -24,6 +24,8 @@ ChartJS.register(
 
 const IssuesChart = () => {
   const { datasets, allStats, setAllStats } = useIssuesChart();
+
+  const { lineChartOptions } = useChartOptions();
 
   const data = {
     labels: LAST_MONTHS,
