@@ -50,12 +50,14 @@ const Calendar = () => {
         ))}
         {days.map((day) => (
           <button
+            key={day.toString()}
             onClick={() => setSelectedDay(day)}
             className={cn(
-              "py-2.5 rounded-full",
-              isSameDay(day, selectedDay) && "bg-current-theme text-black"
+              "py-2.5 rounded-full transition-colors",
+              isSameDay(day, selectedDay)
+                ? "bg-current-theme text-black"
+                : "hover:bg-white/20"
             )}
-            key={day.toString()}
           >
             {format(day, "d")}
           </button>
