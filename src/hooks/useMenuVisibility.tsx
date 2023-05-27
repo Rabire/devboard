@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useMenuVisibility = () => {
+const useMenuVisibility = (closeMenu: () => void) => {
   const [isVisible, setIsVisible] = useState(true);
 
   let prevScrollPos = window.pageYOffset;
@@ -10,7 +10,7 @@ const useMenuVisibility = () => {
 
     if (Math.abs(prevScrollPos - currentScrollPos) > 100) {
       setIsVisible(prevScrollPos > currentScrollPos);
-      //   setShowModal(false);
+      closeMenu();
       prevScrollPos = currentScrollPos;
     }
   };

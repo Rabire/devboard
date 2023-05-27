@@ -8,11 +8,11 @@ const COLORS: string[] = Object.values(THEME_COLORS.theme);
 
 type Props = {
   isDialog?: true;
-  close: () => void;
-  isOpen: boolean;
+  close?: () => void;
+  isOpen?: boolean;
 };
 
-const OptionsDialog = ({ isDialog, close, isOpen }: Props) => {
+const OptionsDialog = ({ isDialog, close = () => null, isOpen }: Props) => {
   const { mode, theme } = useStore($settings);
   const ref = useRef<HTMLDivElement>(null);
 

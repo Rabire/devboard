@@ -1,43 +1,61 @@
-import { useState } from "react";
-// import { useLocation } from "react-router-dom";
-import { createPortal } from "react-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import cn from "classnames";
-
 import BurgerIcon from "./svg/BurgerIcon";
-import MenuModal from "./MenuModal";
 import useMenuVisibility from "../hooks/useMenuVisibility";
+import ExitCrossIcon from "./svg/ExitCrossIcon";
+import MENU_LINKS from "../static/menu-links";
+import DevBoardLogo from "./svg/DevBoardLogo";
+import OptionsDialog from "./OptionsDialog";
 
 const MobileMenu = () => {
   const [showModal, setShowModal] = useState(false);
-  const isVisible = useMenuVisibility();
+  const isVisible = useMenuVisibility(() => setShowModal(false));
 
-  // const location = useLocation();
+  const location = useLocation();
 
-  // useEffect(() => setShowModal(false), [location]);
+  useEffect(() => setShowModal(false), [location]);
 
   if (!isVisible) return null;
 
+  // TODO: handle close on click outside
   return (
-    <>
+    <aside
+      className={cn(
+        "fixed drop-shadow-xl z-50 bg-secondary flex flex-col overflow-hidden",
+        !showModal && "right-3 top-3 rounded-full aspect-square",
+        !showModal && "right-3 top-3 rounded-full aspect-square",
+        showModal && "rounded-none p-8 inset-0 left-auto",
+        showModal ? "justify-between" : "justify-center"
+      )}
+    >
       <button
-        onClick={() => setShowModal(true)}
-        className={cn(
-          "border-2 border-light-secondary dark:border-dark-secondary",
-          "fixed right-1/2 translate-x-1/2 top-[15px] z-40",
-          "bg-black rounded-full w-14 aspect-square",
-          "dark:bg-white tablet:hidden",
-          "flex items-center justify-center"
-        )}
+        onClick={() => setShowModal((prev) => !prev)}
+        className={cn("flex justify-end", !showModal && "p-5")}
       >
-        <BurgerIcon />
+        {showModal ? <ExitCrossIcon /> : <BurgerIcon />}
       </button>
 
-      {showModal &&
-        createPortal(
-          <MenuModal closeModal={() => setShowModal(false)} />,
-          document.body
-        )}
-    </>
+      {showModal && (
+        <>
+          <div className="flex justify-center">
+            <DevBoardLogo />
+          </div>
+
+          <div className="flex flex-col gap-3 text-2xl">
+            {MENU_LINKS.map((link) => (
+              <Link key={link.link} to={link.link} className="text-center">
+                {link.text}
+              </Link>
+            ))}
+          </div>
+
+          <OptionsDialog />
+
+          <button className="text-xs w-full">Disconnect</button>
+        </>
+      )}
+    </aside>
   );
 };
 
