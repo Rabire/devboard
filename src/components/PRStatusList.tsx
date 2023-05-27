@@ -1,4 +1,4 @@
-import PRs from "../utils/faker/pull-requests";
+import generatePRs from "../utils/faker/pull-requests";
 import getStatusTitle from "../utils/pull-request";
 import PRStatus from "../utils/enums";
 import GhDraftIcon from "./svg/GhDraftIcon";
@@ -10,7 +10,7 @@ type Props = { status: PRStatus };
 
 const PRStatusList = ({ status }: Props) => {
   const relatedPRs =
-    PRs().find((ctg) => ctg.status === status)?.pullRequests || [];
+    generatePRs().find((ctg) => ctg.status === status)?.pullRequests || [];
 
   return (
     <div className="flex gap-5 border-bottom py-2.5 mx-5">
