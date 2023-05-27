@@ -7,6 +7,9 @@ import TodoTask from "./TodoTask";
 const TodoList = () => {
   const [filter, setFilter] = useState<"todo" | "done" | "all">("all");
 
+  const todo = todoTasks.get();
+  const done = doneTasks.get();
+
   return (
     <section className="tablet:overflow-y-scroll bg-secondary p-0 tablet:max-h-content">
       {/* Header */}
@@ -45,14 +48,14 @@ const TodoList = () => {
       {/* Tasks */}
       <div className="mx-5">
         {filter !== "done" &&
-          todoTasks
-            .get()
-            .map((task) => <TodoTask key={task.title} task={task} />)}
+          todo.map((task, i) => (
+            <TodoTask key={task.title} task={task} index={i} />
+          ))}
 
         {filter !== "todo" &&
-          doneTasks
-            .get()
-            .map((task) => <TodoTask key={task.title} task={task} />)}
+          done.map((task, i) => (
+            <TodoTask key={task.title} task={task} index={i} />
+          ))}
       </div>
     </section>
   );
