@@ -25,13 +25,13 @@ const MobileMenu = () => {
         "fixed drop-shadow-xl z-50 bg-secondary flex flex-col overflow-hidden",
         !showModal && "right-3 top-3 rounded-full aspect-square",
         !showModal && "right-3 top-3 rounded-full aspect-square",
-        showModal && "rounded-none p-8 inset-0 left-auto",
+        showModal && "rounded-none p-3 inset-0 left-auto",
         showModal ? "justify-between" : "justify-center"
       )}
     >
       <button
         onClick={() => setShowModal((prev) => !prev)}
-        className={cn("flex justify-end", !showModal && "p-5")}
+        className="flex justify-end p-5"
       >
         {showModal ? <ExitCrossIcon /> : <BurgerIcon />}
       </button>
@@ -42,7 +42,7 @@ const MobileMenu = () => {
             <DevBoardLogo />
           </div>
 
-          <div className="flex flex-col gap-3 text-2xl">
+          <div className="flex flex-col gap-3 text-2xl px-4">
             {MENU_LINKS.map((link) => (
               <Link key={link.link} to={link.link} className="text-center">
                 {link.text}

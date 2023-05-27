@@ -30,12 +30,14 @@ const OptionsDialog = ({ isDialog, close = () => null, isOpen }: Props) => {
     <div
       ref={ref}
       className={cn(
-        isDialog && [
-          "flex gap-5 items-center",
-          "absolute top-1/2 -translate-y-1/2 left-full translate-x-5",
-          "bg-secondary p-5 border-light dark:border-dark",
-          "border-2 rounded-lg shadow-md",
-        ]
+        isDialog
+          ? [
+              "flex gap-5 items-center",
+              "absolute top-1/2 -translate-y-1/2 left-full translate-x-5",
+              "bg-secondary p-5 border-light dark:border-dark",
+              "border-2 rounded-lg shadow-md",
+            ]
+          : "mx-4"
       )}
     >
       <button
