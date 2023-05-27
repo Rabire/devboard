@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type Sizes = "sm" | "md" | "lg";
 
 type Props = {
@@ -45,6 +47,8 @@ const DevBoardLogo = ({ size, pathColor = "primary" }: Props) => {
 
   const widthAndPath = Math.abs(width + pathStroke);
 
+  const isSideBar = size === "sm";
+
   return (
     <svg
       width={widthAndPath}
@@ -60,7 +64,7 @@ const DevBoardLogo = ({ size, pathColor = "primary" }: Props) => {
         rx={width / 2}
         className="fill-current-theme"
       />
-      <path
+      <motion.path
         d={draw}
         className={
           pathColor === "primary"
@@ -69,6 +73,13 @@ const DevBoardLogo = ({ size, pathColor = "primary" }: Props) => {
         }
         strokeWidth={pathStroke}
         strokeLinecap="round"
+        initial={{ pathLength: 0, pathOffset: 1 }}
+        animate={{ pathLength: 1, pathOffset: 0 }}
+        transition={{
+          duration: isSideBar ? 3 : 1,
+          repeat: Infinity,
+          repeatDelay: 10,
+        }}
       />
     </svg>
   );
