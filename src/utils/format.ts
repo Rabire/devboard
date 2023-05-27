@@ -18,10 +18,12 @@ const splitCreditCardNumber = (number: string): string[] =>
 export const formatCreditCardNumber = (
   number: string,
   hidden: boolean
-): string => {
+): string[] => {
   const splitted = splitCreditCardNumber(number);
 
-  if (hidden) return `•••• •••• •••• ${splitted.pop()}`;
+  // if (hidden) return `•••• •••• •••• ${splitted.pop()}`;
+  if (hidden) return ["••••", "••••", "••••", splitted.pop() || "••••"];
 
-  return splitted.join(" ");
+  return splitted;
+  // return splitted.join(" ");
 };
