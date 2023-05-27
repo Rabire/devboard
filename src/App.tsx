@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import MobileMenu from "./components/MobileMenu";
 import SideBar from "./components/SideBar";
 import useSettings from "./hooks/useSettings";
+import IntroOverlay from "./components/IntroOverlay";
 
 const Productivity = lazy(() => import("./pages/Productivity"));
 const Administrative = lazy(() => import("./pages/Administrative"));
@@ -56,6 +57,8 @@ function App() {
           }
         />
       </Routes>
+
+      <IntroOverlay />
     </>
   );
 }

@@ -1,0 +1,16 @@
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.anim-intro-overlay {
+  animation-name: fadeout;
+  animation-duration: 500ms;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
