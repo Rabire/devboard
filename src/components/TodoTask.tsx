@@ -16,9 +16,9 @@ const TodoTask = ({ task }: Props) => (
         "checked:after:content-[url(icons/checked-black.svg)] dark:checked:after:content-[url(icons/checked-black.svg)] checked:after:absolute checked:after:left-1/2 checked:after:-translate-x-1/2"
       )}
     />
-    <div className="space-y-2.5">
+    <div className="space-y-1">
       <p className="font-bold">{task.title}</p>
-      {task.description && <p>{task.description}</p>}
+      {task.description && <p className="text-xs">{task.description}</p>}
     </div>
 
     <div className="hidden absolute bg-secondary gap-2.5 p-2.5 right-0 top-2.5 group-hover:flex">
