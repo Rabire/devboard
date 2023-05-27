@@ -5,7 +5,7 @@ import BurgerIcon from "./svg/BurgerIcon";
 import useMenuVisibility from "../hooks/useMenuVisibility";
 import ExitCrossIcon from "./svg/ExitCrossIcon";
 import MENU_LINKS from "../static/menu-links";
-import DevBoardLogo from "./svg/DevBoardLogo";
+import DevBoardLogo from "./DevBoardLogo";
 import OptionsDialog from "./OptionsDialog";
 
 const MobileMenu = () => {
@@ -40,7 +40,7 @@ const MobileMenu = () => {
       {showModal && (
         <>
           <div className="flex justify-center">
-            <DevBoardLogo />
+            <DevBoardLogo size="sm" pathColor="secondary" />
           </div>
           <div className="flex flex-col gap-3 text-2xl px-4">
             {MENU_LINKS.map((link) => (

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import cn from "classnames";
 import MENU_LINKS from "../static/menu-links";
-import DevBoardLogo from "./svg/DevBoardLogo";
+import DevBoardLogo from "./DevBoardLogo";
 import OptionsIcon from "./svg/OptionsIcon";
 import OptionsDialog from "./OptionsDialog";
 
@@ -18,7 +18,7 @@ const SideBar = () => {
           "flex-col justify-between items-center py-12 px-5"
         )}
       >
-        <DevBoardLogo />
+        <DevBoardLogo size="sm" pathColor="secondary" />
 
         <div className="flex flex-col gap-5 items-center">
           {MENU_LINKS.map((link) => (
