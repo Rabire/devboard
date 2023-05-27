@@ -18,7 +18,7 @@ const BulletJournal = () => {
       {/* Header */}
       <div className="section-header mb-2.5">
         <h2>Bullet journal</h2>
-        <button>
+        <button disabled>
           <NotificationIcon />
         </button>
       </div>

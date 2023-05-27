@@ -40,7 +40,9 @@ const SideBar = () => {
           </div>
         </div>
 
-        <button className="text-xs w-full">Disconnect</button>
+        <button disabled className="text-xs w-full">
+          Disconnect
+        </button>
       </nav>
     </aside>
   );

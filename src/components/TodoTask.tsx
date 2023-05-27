@@ -8,6 +8,7 @@ type Props = { task: Task };
 const TodoTask = ({ task }: Props) => (
   <div className="py-5 flex gap-2.5 border-bottom items-center relative group">
     <input
+      disabled
       type="checkbox"
       defaultChecked={task.isDone}
       className={cn(
@@ -22,10 +23,10 @@ const TodoTask = ({ task }: Props) => (
     </div>
 
     <div className="hidden absolute bg-secondary gap-2.5 p-2.5 right-0 top-2.5 group-hover:flex">
-      <button>
+      <button disabled>
         <BinIcon />
       </button>
-      <button>
+      <button disabled>
         <EditIcon />
       </button>
     </div>

@@ -17,10 +17,10 @@ const MusicPlayer = () => (
 
         {/* Skip songs  */}
         <div className="flex gap-5 items-center">
-          <button>
+          <button disabled>
             <SkipMusicIcon />
           </button>
-          <button className="rotate-180">
+          <button disabled className="rotate-180">
             <SkipMusicIcon />
           </button>
         </div>

@@ -13,7 +13,10 @@ const TodoList = () => {
       <div className="section-header">
         <div className="txt-title flex gap-2.5 items-center">
           <h2>Mes tâches</h2>
-          <button className="bg-black dark:bg-white text-white h-[20px] min-w-[20px] flex items-center justify-center rounded-full">
+          <button
+            disabled
+            className="bg-black dark:bg-white text-white h-[20px] min-w-[20px] flex items-center justify-center rounded-full"
+          >
             <AddIcon />
           </button>
         </div>
@@ -45,6 +48,7 @@ const TodoList = () => {
           todoTasks
             .get()
             .map((task) => <TodoTask key={task.title} task={task} />)}
+
         {filter !== "todo" &&
           doneTasks
             .get()

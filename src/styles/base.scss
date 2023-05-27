@@ -20,6 +20,10 @@
     }
   }
 
+  :disabled {
+    @apply cursor-not-allowed;
+  }
+
   #root {
     @apply min-h-screen max-w-[1440px] mx-auto p-5;
     @apply tablet:grid tablet:grid-cols-[1fr_9fr] desktop:grid-cols-[1fr_8fr] gap-5;

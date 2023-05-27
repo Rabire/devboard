@@ -52,7 +52,9 @@ const MobileMenu = () => {
 
           <OptionsDialog />
 
-          <button className="text-xs w-full">Disconnect</button>
+          <button disabled className="text-xs w-full">
+            Disconnect
+          </button>
         </>
       )}
     </aside>
