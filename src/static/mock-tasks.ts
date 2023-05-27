@@ -6,14 +6,14 @@ const MOCK_TASKS = [
   {
     title: "Organiser une soirée jeux de société avec des amis",
     description:
-      "Envoyer invitations, choisir les jeux à jouer, préparer des collations et des boissons",
+      "Envoyer les invitations, choisir les jeux à jouer, préparer des collations et des boissons",
   },
   {
     title: "Réserver une séance de yoga",
-    description: "Proposer a Jean de venir",
+    description: "Proposer à Jean de venir",
   },
   {
-    title: "Creer une playliste pour le sport",
+    title: "Créer une playlist pour le sport",
   },
   {
     title: "Commander le livre d'Alain",
@@ -23,7 +23,7 @@ const MOCK_TASKS = [
     title: "Prendre RDV chez le dentiste",
   },
   {
-    title: "Trouver un cadeau à Louis",
+    title: "Trouver un cadeau pour Louis",
     description: "T-shirt personnalisé, Nouveau parfum, Après-midi au karting",
   },
   {
@@ -36,26 +36,27 @@ const MOCK_TASKS = [
     title: "Ranger la cave",
   },
   {
-    title: "Envoyer devis à  Mathilde",
-    description: "Répondre à son appel d’offre - projet de football en Suisse.",
+    title: "Envoyer un devis à Mathilde",
+    description:
+      "Répondre à son appel d'offres - projet de football en Suisse.",
   },
   {
     title: "Corriger le responsive sur le projet de Paul",
-    description: "Page login et paramètres",
+    description: "Page de connexion et paramètres",
   },
   {
-    title: "Mettre à jour mon profile Malt",
+    title: "Mettre à jour mon profil Malt",
   },
   {
-    title: "Optimiser les performances su projet perso",
-    description: "Page 'Mes annimaux'",
+    title: "Optimiser les performances du projet perso",
+    description: "Page 'Mes animaux'",
   },
   {
     title: "R&D API avec NestJS",
   },
   {
     title: "R&D Chatbox",
-    description: "Utiliser socketIO ?",
+    description: "Utiliser Socket.IO ?",
   },
 ];
 

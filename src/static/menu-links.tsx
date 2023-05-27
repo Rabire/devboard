@@ -5,17 +5,17 @@ import AdministrativeIcon from "../components/svg/AdministrativeIcon";
 const MENU_LINKS = [
   {
     link: "/",
-    text: "Productivity",
+    text: "Productivitée",
     icon: <ProductivityIcon />,
   },
   {
     link: "/technical",
-    text: "Technical",
+    text: "Technique",
     icon: <TechnicalIcon />,
   },
   {
     link: "/administrative",
-    text: "Administrative",
+    text: "Administration",
     icon: <AdministrativeIcon />,
   },
 ];
