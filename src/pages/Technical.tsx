@@ -38,7 +38,7 @@ const Technical = () => {
       <div
         className={cn(
           "flex flex-col tablet:grid grid-rows-[auto_1fr]",
-          "gap-x-5 desktop:gap-y-5 desktop:max-h-content",
+          "desktop:max-h-content gap-5",
           "tablet:grid-cols-2 desktop:grid-cols-1",
           "tablet:col-span-2 desktop:col-span-1"
         )}
