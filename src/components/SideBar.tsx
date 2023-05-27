@@ -31,13 +31,12 @@ const SideBar = () => {
             <button onClick={() => setShowOptions(true)}>
               <OptionsIcon />
             </button>
-            {showOptions && (
-              <OptionsDialog
-                isDialog
-                close={() => setShowOptions(false)}
-                isOpen={showOptions}
-              />
-            )}
+
+            <OptionsDialog
+              isDialog
+              close={() => setShowOptions(false)}
+              isOpen={showOptions}
+            />
           </div>
         </div>
 
