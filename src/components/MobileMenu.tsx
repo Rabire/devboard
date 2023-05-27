@@ -1,30 +1,19 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState } from "react";
+// import { useLocation } from "react-router-dom";
 import { createPortal } from "react-dom";
 import cn from "classnames";
 
 import BurgerIcon from "./svg/BurgerIcon";
 import MenuModal from "./MenuModal";
+import useMenuVisibility from "../hooks/useMenuVisibility";
 
 const MobileMenu = () => {
   const [showModal, setShowModal] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
+  const isVisible = useMenuVisibility();
 
-  const location = useLocation();
+  // const location = useLocation();
 
-  useEffect(() => setShowModal(false), [location]);
-
-  let prevScrollPos = window.pageYOffset;
-
-  window.onscroll = () => {
-    const currentScrollPos = window.pageYOffset;
-
-    if (Math.abs(prevScrollPos - currentScrollPos) > 100) {
-      setIsVisible(prevScrollPos > currentScrollPos);
-      setShowModal(false);
-      prevScrollPos = currentScrollPos;
-    }
-  };
+  // useEffect(() => setShowModal(false), [location]);
 
   if (!isVisible) return null;
 
