@@ -25,7 +25,7 @@ const DoughnutSection = ({ type }: Props) => {
   };
 
   return (
-    <section>
+    <section className="flex-1">
       <div className="flex justify-between items-end mb-5">
         <h2>
           {type === "incomes" ? "Revenus par clients" : "Chiffre d’affaire"}

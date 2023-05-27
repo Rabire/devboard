@@ -19,7 +19,7 @@ const Administrative = () => (
 
     <ExpensesSection />
 
-    <div className="grid gap-5 desktop:grid-cols-2 tablet:col-span-1 desktop:col-span-2 top-0">
+    <div className="flex gap-5 flex-col desktop:flex-row tablet:col-span-1 desktop:col-span-2">
       <DoughnutSection type="incomes" />
       <DoughnutSection type="turnover" />
     </div>
