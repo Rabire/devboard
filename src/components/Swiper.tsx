@@ -6,11 +6,11 @@ type Props = {
 };
 
 const Swiper = ({ previous, next }: Props) => (
-  <div className="space-x-5">
-    <button onClick={previous}>
+  <div className="">
+    <button onClick={previous} className="swiper-btn">
       <SwipeArrowIcon />
     </button>
-    <button className="rotate-180" onClick={next}>
+    <button className="rotate-180 swiper-btn" onClick={next}>
       <SwipeArrowIcon />
     </button>
   </div>

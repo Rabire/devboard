@@ -2,16 +2,16 @@
 
 const AdministrationButtons = () => (
   <div className="grid grid-cols-2 grid-rows-2 gap-2.5">
-    <button disabled className="btn">
+    <button disabled className="admin-btn">
       Devis
     </button>
-    <button disabled className="btn">
+    <button disabled className="admin-btn">
       Factures
     </button>
-    <button disabled className="btn">
+    <button disabled className="admin-btn">
       Mes clients
     </button>
-    <button disabled className="btn">
+    <button disabled className="admin-btn">
       Opportunités
     </button>
 

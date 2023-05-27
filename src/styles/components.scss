@@ -49,7 +49,7 @@ section {
   }
 }
 
-.btn {
+.admin-btn {
   @apply p-5 text-lg bg-secondary rounded-lg border-[1px] border-black dark:border-white;
   @apply items-center justify-center flex w-full;
   @apply hover:bg-current-theme hover:text-black hover:font-bold transition-colors;
@@ -58,4 +58,8 @@ section {
 .section-header {
   @apply bg-secondary sticky top-0  p-5 z-20;
   @apply flex justify-between gap-5 rounded-2xl;
+}
+
+.swiper-btn {
+  @apply hover:bg-white/20 p-2.5 rounded-full transition-colors;
 }
