@@ -6,7 +6,7 @@ import DevBoardLogo from "./svg/DevBoardLogo";
 import OptionsIcon from "./svg/OptionsIcon";
 import OptionsDialog from "./OptionsDialog";
 
-const NavBar = () => {
+const SideBar = () => {
   const [showOptions, setShowOptions] = useState(false);
 
   return (
@@ -47,4 +47,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default SideBar;

@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import MobileMenu from "./components/MobileMenu";
-import NavBar from "./components/NavBar";
+import SideBar from "./components/SideBar";
 import useSettings from "./hooks/useSettings";
 
 const Productivity = lazy(() => import("./pages/Productivity"));
@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <MobileMenu />
-      <NavBar />
+      <SideBar />
 
       <Routes>
         <Route
