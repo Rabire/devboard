@@ -22,7 +22,7 @@ const MobileMenu = () => {
   return (
     <aside
       className={cn(
-        "fixed drop-shadow-xl z-50 bg-secondary flex flex-col overflow-hidden",
+        "fixed drop-shadow-xl z-50 bg-secondary flex flex-col overflow-hidden tablet:hidden",
         !showModal && "right-3 top-3 rounded-full aspect-square",
         !showModal && "right-3 top-3 rounded-full aspect-square",
         showModal && "rounded-none p-3 inset-0 left-auto",
@@ -41,7 +41,6 @@ const MobileMenu = () => {
           <div className="flex justify-center">
             <DevBoardLogo />
           </div>
-
           <div className="flex flex-col gap-3 text-2xl px-4">
             {MENU_LINKS.map((link) => (
               <Link key={link.link} to={link.link} className="text-center">

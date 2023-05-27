@@ -27,9 +27,11 @@ const OptionsDialog = ({ isDialog, close = () => null, isOpen }: Props) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [ref]);
 
+  const show = isDialog ? isOpen : true;
+
   return (
     <AnimatePresence>
-      {isOpen && (
+      {show && (
         <motion.div
           ref={ref}
           key="options-dialog"
