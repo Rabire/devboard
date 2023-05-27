@@ -23,7 +23,8 @@ const MobileMenu = () => {
     <aside
       className={cn(
         "fixed drop-shadow-xl z-50 bg-secondary flex flex-col overflow-hidden tablet:hidden",
-        !showModal && "right-3 top-3 rounded-full aspect-square",
+        !showModal &&
+          "right-3 top-3 rounded-full aspect-square border-light dark:border-dark border-2",
         !showModal && "right-3 top-3 rounded-full aspect-square",
         showModal && "rounded-none p-3 inset-0 left-auto",
         showModal ? "justify-between" : "justify-center"
