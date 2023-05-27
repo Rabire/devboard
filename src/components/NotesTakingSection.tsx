@@ -3,11 +3,16 @@ import { Remarkable } from "remarkable";
 
 const md = new Remarkable();
 
+const DEFAULT_NOTES =
+  "# API Keys\n- Spotify `wtcs7Vgi3I`\n- Stripe Token `xAS0CbMZPj`\n- Discord bot `OYsjhcz4Td`\n\n---\n\n`06 99 88 99 55` Géraldine LEBRETON\n> Je recherche un developpeur React native pour commencer le mois prochain\n\n---\n\n*100vw - 1440 - (20x2)*";
+
 const NotesTakingSection = () => {
-  const [text, setText] = useState("# hello *world*");
+  const [text, setText] = useState(DEFAULT_NOTES);
   const [focused, setFocused] = useState(false);
 
   const handleFocus = () => setFocused(true);
+
+  console.log(text);
 
   return (
     <section className="overflow-y-scroll p-0 relative flex-1 flex flex-col">
@@ -24,7 +29,7 @@ const NotesTakingSection = () => {
         />
       ) : (
         <div
-          className="markdown px-5 overflow-scroll flex-1"
+          className="markdown px-5 overflow-scroll flex-1 cursor-text"
           onClick={handleFocus}
           dangerouslySetInnerHTML={{ __html: md.render(text) }}
         ></div>

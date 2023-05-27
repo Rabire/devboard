@@ -33,7 +33,7 @@ section {
   }
 
   code {
-    @apply bg rounded-md p-px;
+    @apply bg rounded-md py-px px-1.5;
   }
 
   ul {
@@ -42,6 +42,10 @@ section {
 
   blockquote {
     @apply border-l-2 border-light dark:border-dark pl-2;
+  }
+
+  hr {
+    @apply my-2;
   }
 }
 
