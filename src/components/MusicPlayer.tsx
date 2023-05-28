@@ -40,7 +40,7 @@ const MusicPlayer = () => {
         aria-label="pause music"
         onClick={() => setIsPaused((prev) => !prev)}
       >
-        {isPaused ? <PauseIcon /> : <PlayIcon />}
+        {isPaused ? <PlayIcon /> : <PauseIcon />}
       </button>
 
       <div className="flex flex-col justify-between h-full">
