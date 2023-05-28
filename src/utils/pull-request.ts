@@ -1,13 +1,17 @@
 import PRStatus from "./enums";
+import { pluralize } from "./format";
 
-const getStatusTitle = (status: PRStatus) => {
+const getStatusTitle = (status: PRStatus, number: number) => {
   switch (status) {
     case PRStatus.Ready:
-      return "prête à être mergée";
+      return `${pluralize(number, "prête")} à être ${pluralize(
+        number,
+        "mergée"
+      )}`;
     case PRStatus.Pending:
-      return "attente de relecture";
+      return "en attente de relecture";
     case PRStatus.Rejected:
-      return "rejetée";
+      return pluralize(number, "rejetée");
     default:
       return "en draft";
   }

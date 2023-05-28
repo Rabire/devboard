@@ -1,6 +1,6 @@
 export const PROJECTS = ["Projet X", "Projet Y", "Projet Z"];
 
-export const TEAMS = ["Backend", "Frontend", "Mobile", "Product/Design"];
+export const TEAMS = ["Backend", "Frontend", "Mobile", "Produit/Design"];
 
 export const SPRINTS = [
   "Sprint #3 - Feature parcours souscription",

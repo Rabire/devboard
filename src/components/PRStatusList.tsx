@@ -23,7 +23,7 @@ const PRStatusList = ({ status }: Props) => {
 
       <div className="overflow-hidden">
         <p className="font-semibold">
-          {relatedPRs.length} {getStatusTitle(status)}
+          {relatedPRs.length} {getStatusTitle(status, relatedPRs.length)}
         </p>
         <ul className="list-disc list-inside">
           {relatedPRs.map((pr, index) => (

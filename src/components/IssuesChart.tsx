@@ -44,7 +44,7 @@ const IssuesChart = () => {
               isActive: allStats,
             },
             {
-              label: "Yours",
+              label: "Vôtres",
               onClick: () => setAllStats(false),
               isActive: !allStats,
             },

@@ -57,7 +57,7 @@ const OptionsDialog = ({ isDialog, close = () => null, isOpen }: Props) => {
             )}
             onClick={switchMode}
           >
-            Theme {mode === "dark" ? "clair" : "foncé"}
+            Thème {mode === "dark" ? "clair" : "foncé"}
           </button>
 
           <div className={cn("flex gap-1", !isDialog && "grid grid-cols-4")}>

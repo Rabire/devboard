@@ -4,7 +4,7 @@ import { Remarkable } from "remarkable";
 const md = new Remarkable();
 
 const DEFAULT_NOTES =
-  "# API Keys\n- Spotify `wtcs7Vgi3I`\n- Stripe Token `xAS0CbMZPj`\n- Discord bot `OYsjhcz4Td`\n\n---\n\n`06 99 88 99 55` Géraldine LEBRETON\n> Je recherche un developpeur React native pour commencer le mois prochain\n\n---\n\n*100vw - 1440 - (20x2)*";
+  "# API Keys\n- Spotify `wtcs7Vgi3I`\n- Stripe Token `xAS0CbMZPj`\n- Discord bot `OYsjhcz4Td`\n\n---\n\n`06 99 88 99 55` Géraldine LEBRETON\n> Je recherche un développeur React native pour commencer le mois prochain\n\n---\n\n*100vw - 1440 - (20x2)*";
 
 const NotesTakingSection = () => {
   const [text, setText] = useState(DEFAULT_NOTES);

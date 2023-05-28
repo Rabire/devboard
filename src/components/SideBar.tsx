@@ -49,7 +49,7 @@ const SideBar = () => {
         </div>
 
         <button disabled className="text-xs w-full">
-          Disconnect
+          Déconnexion
         </button>
       </nav>
     </aside>

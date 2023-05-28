@@ -32,12 +32,12 @@ const TodoList = () => {
               isActive: filter === "todo",
             },
             {
-              label: "Done",
+              label: "Términés",
               onClick: () => setFilter("done"),
               isActive: filter === "done",
             },
             {
-              label: "All",
+              label: "Toutes",
               onClick: () => setFilter("all"),
               isActive: filter === "all",
             },

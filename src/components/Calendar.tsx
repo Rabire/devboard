@@ -13,6 +13,7 @@ import { useStore } from "@nanostores/react";
 import Swiper from "./Swiper";
 import { $selectedDay, setSelectedDay } from "../stores/productivity";
 import { WEEK_DAYS } from "../static/calendar";
+import { fr } from "date-fns/locale";
 
 const today = startOfToday();
 
@@ -31,7 +32,9 @@ const Calendar = () => {
     <section>
       {/* Header */}
       <div className="flex justify-between mb-5">
-        <h3 className="font-bold">{format(month, "MMMM yyyy")}</h3>
+        <h3 className="font-bold capitalize">
+          {format(month, "MMMM yyyy", { locale: fr })}
+        </h3>
         <Swiper
           previous={() => setMonth(add(month, { months: -1 }))}
           next={() => setMonth(add(month, { months: 1 }))}

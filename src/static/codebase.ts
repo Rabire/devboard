@@ -1,10 +1,10 @@
 const LABELS = [
-  "Simplicitée",
+  "Simplicité",
   "Documentation",
   "Tests",
   "Warnings",
   "Code dupliqué",
-  "Perfs",
+  "Performances",
   "SEO",
   "Accessibilité",
 ];

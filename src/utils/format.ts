@@ -27,3 +27,6 @@ export const formatCreditCardNumber = (
   return splitted;
   // return splitted.join(" ");
 };
+
+export const pluralize = (count: number, word: string): string =>
+  count > 1 ? `${word}s` : word;

@@ -28,7 +28,7 @@ const DoughnutSection = ({ type }: Props) => {
     <section className="flex-1">
       <div className="flex justify-between items-end mb-5">
         <h2>
-          {type === "incomes" ? "Revenus par clients" : "Chiffre d’affaire"}
+          {type === "incomes" ? "Revenus par client" : "Chiffre d’affaire"}
         </h2>
         <FilterButton
           buttons={[
