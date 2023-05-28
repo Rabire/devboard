@@ -2,10 +2,8 @@ import { useEffect, useRef } from "react";
 import cn from "classnames";
 import { motion, AnimatePresence } from "framer-motion";
 import { useStore } from "@nanostores/react";
-import THEME_COLORS from "../utils/tailwing-config";
+import { THEME_COLORS } from "../styles/themes";
 import { setTheme, $settings, switchMode } from "../stores/theme";
-
-const COLORS: string[] = Object.values(THEME_COLORS.theme);
 
 type Props = {
   isDialog?: true;
@@ -61,7 +59,7 @@ const OptionsDialog = ({ isDialog, close = () => null, isOpen }: Props) => {
           </button>
 
           <div className={cn("flex gap-1", !isDialog && "grid grid-cols-4")}>
-            {COLORS.map((color) => (
+            {THEME_COLORS.map((color) => (
               <motion.button
                 key={color}
                 onClick={() => setTheme(color)}

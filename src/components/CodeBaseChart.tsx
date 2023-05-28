@@ -12,7 +12,7 @@ import {
 import { useStore } from "@nanostores/react";
 import { Radar } from "react-chartjs-2";
 import { $settings } from "../stores/theme";
-import THEME_COLORS from "../utils/tailwing-config";
+import { MODE_COLORS } from "../styles/themes";
 import LABELS from "../static/codebase";
 import useChartOptions from "../hooks/useChartOptions";
 
@@ -49,8 +49,8 @@ const CodeBaseChart = () => {
         },
         beginAtZero: true,
         suggestedMax: 100,
-        grid: { color: THEME_COLORS[mode] },
-        angleLines: { color: THEME_COLORS[mode] },
+        grid: { color: MODE_COLORS[mode] },
+        angleLines: { color: MODE_COLORS[mode] },
         pointLabels: {
           font: { size: 12 },
           color,

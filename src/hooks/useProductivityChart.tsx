@@ -3,7 +3,7 @@ import { randNumber } from "@ngneat/falso";
 import { useStore } from "@nanostores/react";
 import { LAST_MONTHS, LAST_WEEKS } from "../static/calendar";
 import { $settings } from "../stores/theme";
-import THEME_COLORS from "../utils/tailwing-config";
+import { THEME_COLORS } from "../styles/themes";
 import projects from "../utils/projects";
 
 const useProductivityChart = () => {
@@ -25,7 +25,7 @@ const useProductivityChart = () => {
     data: isWeek
       ? LAST_WEEKS.map(() => randNumber({ max: 12 }))
       : LAST_MONTHS.map(() => randNumber({ max: 40 })),
-    backgroundColor: THEME_COLORS.theme[i + 1],
+    backgroundColor: THEME_COLORS[i + 1],
   }));
 
   return { isWeek, setIsWeek, tasksDatasets, activitiesDatasets };
