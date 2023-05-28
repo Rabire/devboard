@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@ngneat/falso": "^6.4.0",
-    "@tippyjs/react": "^4.2.6",
     "chart.js": "^4.3.0",
     "classnames": "^2.3.2",
     "date-fns": "^2.30.0",
