@@ -4,12 +4,11 @@ import MobileMenu from "./components/MobileMenu";
 import SideBar from "./components/SideBar";
 import useSettings from "./hooks/useSettings";
 import IntroOverlay from "./components/IntroOverlay";
+import Loader from "./components/Loader";
 
 const Productivity = lazy(() => import("./pages/Productivity"));
 const Administrative = lazy(() => import("./pages/Administrative"));
 const Technical = lazy(() => import("./pages/Technical"));
-
-// TODO: add suspense while loading page
 
 function App() {
   useSettings();
@@ -24,7 +23,7 @@ function App() {
           path="/"
           index
           element={
-            <Suspense fallback={<>...</>}>
+            <Suspense fallback={<Loader />}>
               <Productivity />
             </Suspense>
           }
@@ -33,7 +32,7 @@ function App() {
         <Route
           path="technical"
           element={
-            <Suspense fallback={<>...</>}>
+            <Suspense fallback={<Loader />}>
               <Technical />
             </Suspense>
           }
@@ -42,7 +41,7 @@ function App() {
         <Route
           path="administrative"
           element={
-            <Suspense fallback={<>...</>}>
+            <Suspense fallback={<Loader />}>
               <Administrative />
             </Suspense>
           }
@@ -51,7 +50,7 @@ function App() {
         <Route
           path="*"
           element={
-            <Suspense fallback={<>...</>}>
+            <Suspense fallback={<Loader />}>
               <Navigate to="/" />
             </Suspense>
           }

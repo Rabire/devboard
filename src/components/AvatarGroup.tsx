@@ -2,7 +2,7 @@ import { Person } from "../utils/types";
 
 type Props = { persons: Person[] };
 
-// TODO: add hover effect
+// TODO: add hover effect to show member infos
 // TODO: add shine effect while loading
 const AvatarGroup = ({ persons }: Props) => (
   <div className="flex">
