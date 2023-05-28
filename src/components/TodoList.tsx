@@ -14,26 +14,17 @@ const TodoList = () => {
     <section className="tablet:overflow-y-scroll bg-secondary p-0 tablet:max-h-content">
       {/* Header */}
       <div className="section-header">
-        <div className="txt-title flex gap-2.5 items-center">
-          <h2>Mes tâches</h2>
-          <button
-            disabled
-            aria-label="add-task"
-            className="bg-black dark:bg-white text-white h-[20px] min-w-[20px] flex items-center justify-center rounded-full"
-          >
-            <AddIcon />
-          </button>
-        </div>
+        <h2>Mes tâches</h2>
 
         <FilterButton
           buttons={[
             {
-              label: "Todo",
+              label: "À faire",
               onClick: () => setFilter("todo"),
               isActive: filter === "todo",
             },
             {
-              label: "Términés",
+              label: "Terminées",
               onClick: () => setFilter("done"),
               isActive: filter === "done",
             },
@@ -48,6 +39,17 @@ const TodoList = () => {
 
       {/* Tasks */}
       <div className="mx-5">
+        <button
+          disabled
+          aria-label="add-task"
+          className="flex gap-2.5 items-center"
+        >
+          <div className="bg-black dark:bg-white text-white h-[20px] min-w-[20px] flex items-center justify-center rounded-full">
+            <AddIcon />
+          </div>
+          Nouvelle tâche
+        </button>
+
         {filter !== "done" &&
           todo.map((task, i) => (
             <TodoTask key={task.title} task={task} index={i} />

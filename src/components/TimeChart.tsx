@@ -43,12 +43,12 @@ const TimeChart = () => {
         <FilterButton
           buttons={[
             {
-              label: "Week",
+              label: "Semaines",
               onClick: () => setIsWeek(true),
               isActive: isWeek,
             },
             {
-              label: "Month",
+              label: "Mois",
               onClick: () => setIsWeek(false),
               isActive: !isWeek,
             },

@@ -17,7 +17,7 @@ const FilterButton = ({ buttons }: Props) => (
         key={button.label}
         onClick={button.onClick}
         className={cn(
-          "py-1 px-2 rounded-full",
+          "py-1 px-2 rounded-full whitespace-nowrap",
           button.isActive
             ? "bg-current-theme font-semibold text-black"
             : "hover:bg-white/20"
