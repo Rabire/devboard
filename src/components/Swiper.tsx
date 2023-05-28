@@ -7,10 +7,10 @@ type Props = {
 
 const Swiper = ({ previous, next }: Props) => (
   <div className="">
-    <button onClick={previous} className="swiper-btn">
+    <button onClick={previous} className="swiper-btn" aria-label="previous">
       <SwipeArrowIcon />
     </button>
-    <button className="rotate-180 swiper-btn" onClick={next}>
+    <button className="rotate-180 swiper-btn" onClick={next} aria-label="next">
       <SwipeArrowIcon />
     </button>
   </div>

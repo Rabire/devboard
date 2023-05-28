@@ -12,8 +12,6 @@ const NotesTakingSection = () => {
 
   const handleFocus = () => setFocused(true);
 
-  console.log(text);
-
   return (
     <section className="overflow-y-scroll p-0 relative flex-1 flex flex-col">
       <h2 className="p-5 sticky top-0 bg-secondary">Notes rapides</h2>

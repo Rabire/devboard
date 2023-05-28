@@ -22,13 +22,21 @@ const SideBar = () => {
 
         <div className="flex flex-col gap-5 items-center">
           {MENU_LINKS.map((link) => (
-            <Link key={link.link} to={link.link} className="text-center">
+            <Link
+              key={link.link}
+              to={link.link}
+              className="text-center"
+              aria-label={`${link.text} page`}
+            >
               {link.icon}
             </Link>
           ))}
 
           <div className="relative">
-            <button onClick={() => setShowOptions(true)}>
+            <button
+              onClick={() => setShowOptions(true)}
+              aria-label="open theme options"
+            >
               <OptionsIcon />
             </button>
 
