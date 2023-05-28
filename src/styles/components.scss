@@ -1,5 +1,5 @@
 .album {
-  @apply bg-[url('pictures/daft-punk-album.jpg')] bg-cover;
+  @apply bg-[url('../assets/pictures/daft-punk-album.jpg')] bg-cover;
   @apply h-full aspect-square rounded-lg border-2 border-white;
   @apply flex items-center justify-center relative;
 

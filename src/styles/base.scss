@@ -20,6 +20,10 @@
     }
   }
 
+  img {
+    @apply text-[0px];
+  }
+
   :disabled {
     @apply cursor-not-allowed;
   }

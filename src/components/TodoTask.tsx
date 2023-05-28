@@ -23,7 +23,7 @@ const TodoTask = ({ task, index }: Props) => (
         className={cn(
           "appearance-none h-5 aspect-square border-[1px] rounded-full border-black dark:border-light relative",
           "checked:bg-current-theme checked:border-0",
-          "checked:after:content-[url(icons/checked-black.svg)] dark:checked:after:content-[url(icons/checked-black.svg)]",
+          "checked:after:content-[url(../assets/icons/checked-black.svg)] dark:checked:after:content-[url(../assets/icons/checked-black.svg)]",
           "checked:after:absolute checked:after:left-1/2 checked:after:-translate-x-1/2"
         )}
       />

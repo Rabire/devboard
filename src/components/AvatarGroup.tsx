@@ -9,7 +9,7 @@ const AvatarGroup = ({ persons }: Props) => (
     {persons.map((person) => (
       <img
         key={person.id}
-        className="rounded-full w-8 min-w-8 h-8 border-white border-2 -ml-2.5 first:ml-0 bg text-[0px]"
+        className="rounded-full w-8 min-w-8 h-8 border-white border-2 -ml-2.5 first:ml-0 bg"
         src={person.image}
         alt={person.name}
       />
