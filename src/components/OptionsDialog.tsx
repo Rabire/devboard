@@ -70,10 +70,7 @@ const OptionsDialog = ({ isDialog, close = () => null, isOpen }: Props) => {
                 style={{ backgroundColor: color }}
               >
                 {theme === color && (
-                  <img
-                    src="/src/assets/icons/checked-black.svg"
-                    alt="check icon"
-                  />
+                  <img src="/icons/checked-black.svg" alt="check icon" />
                 )}
               </motion.button>
             ))}
