@@ -49,3 +49,11 @@ export type Expense = {
   amount: string;
   date: Date;
 };
+
+export type Music = {
+  title: string;
+  artist: string;
+  cover: string;
+  duration: number;
+  link: string;
+};
