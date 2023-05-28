@@ -16,7 +16,7 @@ const useProductivityChart = () => {
       data: (isWeek ? LAST_WEEKS : LAST_MONTHS).map(() =>
         randNumber({ max: 40 })
       ),
-      backgroundColor: theme, // TODO: current theme in hex (get it in store maybe ?)
+      backgroundColor: theme,
     },
   ];
 

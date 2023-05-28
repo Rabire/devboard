@@ -44,5 +44,3 @@ const generateActivities = () => {
 };
 
 export default generateActivities;
-
-// TODO: tests

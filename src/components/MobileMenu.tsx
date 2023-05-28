@@ -18,6 +18,7 @@ const MobileMenu = () => {
   useEffect(() => setShowModal(false), [location]);
 
   // TODO: handle close on click outside
+  // TODO: animate opening
   return (
     <AnimatePresence>
       {isVisible && (
