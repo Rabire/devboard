@@ -1,21 +1,21 @@
-import { faker } from "@faker-js/faker";
+import { randFloat, randPastDate } from "@ngneat/falso";
 import { Expense } from "../types";
-import { formatFakerExpense, formatCurrency } from "../format";
+import { formatCurrency } from "../format";
+import MOCK_TRANSACTIONS from "../../static/mock-transactions";
 
-const generateExpense = (): Expense => {
-  const fakeAmount = faker.number.float({
-    min: -1000,
-    max: 1000,
-    precision: 0.01,
-  });
+const generateExpenses = (): Expense[] =>
+  MOCK_TRANSACTIONS.map((expense) => {
+    const fakeAmount = randFloat({
+      min: -1000,
+      max: 1000,
+      precision: 0.01,
+    });
 
-  const fakeDescription = faker.finance.transactionDescription();
+    return {
+      description: expense,
+      amount: formatCurrency(fakeAmount),
+      date: randPastDate(),
+    };
+  }).sort((a, b) => b.date.getTime() - a.date.getTime());
 
-  return {
-    description: formatFakerExpense(fakeDescription),
-    amount: formatCurrency(fakeAmount),
-    date: faker.date.past(),
-  };
-};
-
-export default generateExpense;
+export default generateExpenses;

@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ngneat/falso": "^6.4.0",
     "@tippyjs/react": "^4.2.6",
     "chart.js": "^4.3.0",
     "classnames": "^2.3.2",
@@ -23,7 +24,6 @@
     "remarkable": "^2.0.1"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.0.1",
     "@nanostores/persistent": "^0.8.0",
     "@nanostores/react": "^0.6.0",
     "@types/react": "^18.0.28",

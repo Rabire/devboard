@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { format } from "date-fns";
-import { faker } from "@faker-js/faker";
+import { randFloat } from "@ngneat/falso";
 import { motion } from "framer-motion";
 import generateCreditCard from "../utils/faker/credit-card";
 import { formatCurrency, formatCreditCardNumber } from "../utils/format";
@@ -17,7 +17,7 @@ const CreditCard = () => {
       <div>
         <p className="opacity-50">Solde disponible</p>
         <p className="text-4xl font-bold">
-          {formatCurrency(faker.number.float({ min: 10000, max: 100000 }))}
+          {formatCurrency(randFloat({ min: 10000, max: 100000 }))}
         </p>
       </div>
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { faker } from "@faker-js/faker";
+import { randNumber } from "@ngneat/falso";
 import { useStore } from "@nanostores/react";
 import { LAST_MONTHS, LAST_WEEKS } from "../static/calendar";
 import { $settings } from "../stores/theme";
@@ -13,7 +13,9 @@ const useProductivityChart = () => {
   const tasksDatasets = [
     {
       label: "Done tasks",
-      data: (isWeek ? LAST_WEEKS : LAST_MONTHS).map(() => faker.number.int(40)),
+      data: (isWeek ? LAST_WEEKS : LAST_MONTHS).map(() =>
+        randNumber({ max: 40 })
+      ),
       backgroundColor: theme, // TODO: current theme in hex (get it in store maybe ?)
     },
   ];
@@ -21,8 +23,8 @@ const useProductivityChart = () => {
   const activitiesDatasets = projects.map((project, i) => ({
     label: project.title,
     data: isWeek
-      ? LAST_WEEKS.map(() => faker.number.int(12))
-      : LAST_MONTHS.map(() => faker.number.int(40)),
+      ? LAST_WEEKS.map(() => randNumber({ max: 12 }))
+      : LAST_MONTHS.map(() => randNumber({ max: 40 })),
     backgroundColor: THEME_COLORS.theme[i + 1],
   }));
 

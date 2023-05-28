@@ -1,5 +1,5 @@
 import { eachDayOfInterval, isSaturday, isSunday, set } from "date-fns";
-import { faker } from "@faker-js/faker";
+import { rand } from "@ngneat/falso";
 import { Activity, Slot } from "../types";
 import { $project } from "../../stores/technical";
 import {
@@ -12,7 +12,7 @@ const project = $project.get();
 
 const generateSlotActivity = (day: Date, slot: Slot) => {
   const activity: Activity = {
-    name: faker.helpers.arrayElement(MOCK_ACTIVITIES),
+    name: rand(MOCK_ACTIVITIES),
     project,
     start: set(day, { hours: slot.start }),
     end: set(day, { hours: slot.end }),
@@ -29,8 +29,8 @@ const generateActivities = () => {
 
   // generate activities for each week days
   const activities = weekDays.map((day) => {
-    const amSlot = faker.helpers.arrayElement(AM_SLOTS);
-    const pmSlot = faker.helpers.arrayElement(PM_SLOTS);
+    const amSlot = rand(AM_SLOTS);
+    const pmSlot = rand(PM_SLOTS);
 
     return [
       generateSlotActivity(day, amSlot[0]),

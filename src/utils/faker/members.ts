@@ -1,13 +1,13 @@
-import { faker } from "@faker-js/faker";
+import { rand, randAvatar, randFullName, randUuid } from "@ngneat/falso";
 import { Person, Sprint } from "../types";
 import { TEAMS } from "../../static/mock-projects";
 
 const generatePerson = (sprints: Sprint[]): Person => ({
-  id: faker.string.uuid(),
-  name: faker.person.fullName(),
-  team: faker.helpers.arrayElement(TEAMS),
-  sprint: faker.helpers.arrayElement(sprints),
-  image: faker.image.avatarGitHub(),
+  id: randUuid(),
+  name: randFullName(),
+  team: rand(TEAMS),
+  sprint: rand(sprints),
+  image: randAvatar(),
 });
 
 export default generatePerson;

@@ -1,4 +1,4 @@
-import { faker } from "@faker-js/faker";
+import { randNumber } from "@ngneat/falso";
 import { endOfYear } from "date-fns";
 import ProgressBarSection from "../components/ProgressBarSection";
 import ExpensesSection from "../components/ExpensesSection";
@@ -12,7 +12,7 @@ const Administrative = () => (
     <ProgressBarSection
       subTitle="Objectifs"
       title="Semestre 2 - 65 000€"
-      percentage={faker.number.int(100)}
+      percentage={randNumber({ max: 100 })}
       deadline={endOfYear(new Date())}
     />
     <CreditCard />

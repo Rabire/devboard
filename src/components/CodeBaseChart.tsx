@@ -1,4 +1,4 @@
-import { faker } from "@faker-js/faker";
+import { randNumber } from "@ngneat/falso";
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -33,7 +33,7 @@ const CodeBaseChart = () => {
     datasets: [
       {
         label: "% de satisfaction",
-        data: LABELS.map(() => faker.number.int({ min: 20, max: 100 })),
+        data: LABELS.map(() => randNumber({ min: 20, max: 100 })),
         backgroundColor: theme,
       },
     ],

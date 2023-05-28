@@ -7,7 +7,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { faker } from "@faker-js/faker";
+import { randNumber } from "@ngneat/falso";
 import { Line } from "react-chartjs-2";
 import { LAST_MONTHS } from "../static/calendar";
 import THEME_COLORS from "../utils/tailwing-config";
@@ -27,13 +27,13 @@ const data = {
   datasets: [
     {
       label: "Dépenses",
-      data: LAST_MONTHS.map(() => faker.number.int({ min: 5000, max: 15000 })),
+      data: LAST_MONTHS.map(() => randNumber({ min: 5000, max: 15000 })),
       backgroundColor: THEME_COLORS.theme[1],
       borderColor: THEME_COLORS.theme[1],
     },
     {
       label: "Entrées",
-      data: LAST_MONTHS.map(() => faker.number.int({ min: 5000, max: 15000 })),
+      data: LAST_MONTHS.map(() => randNumber({ min: 5000, max: 15000 })),
       backgroundColor: THEME_COLORS.theme[2],
       borderColor: THEME_COLORS.theme[2],
     },

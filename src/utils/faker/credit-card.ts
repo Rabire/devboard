@@ -1,10 +1,16 @@
-import { faker } from "@faker-js/faker";
+import {
+  randCreditCardCVV,
+  randCreditCardNumber,
+  randFirstName,
+  randFutureDate,
+  randLastName,
+} from "@ngneat/falso";
 
 const generateCreditCard = () => ({
-  ccv: faker.finance.creditCardCVV(),
-  number: faker.string.numeric(16),
-  expirationDate: faker.date.future(),
-  name: `${faker.person.firstName()} ${faker.person.lastName().toUpperCase()}`,
+  ccv: randCreditCardCVV(),
+  number: randCreditCardNumber({ brand: "Visa" }),
+  expirationDate: randFutureDate(),
+  name: `${randFirstName()} ${randLastName().toUpperCase()}`,
 });
 
 export default generateCreditCard;

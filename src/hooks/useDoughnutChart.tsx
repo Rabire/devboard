@@ -1,4 +1,4 @@
-import { faker } from "@faker-js/faker";
+import { randNumber } from "@ngneat/falso";
 import { useState } from "react";
 import { TURNOVER_LABELS, CLIENTS } from "../static/mock-incomes";
 import THEME_COLORS from "../utils/tailwing-config";
@@ -13,7 +13,7 @@ const useDoughnutChart = (type: "incomes" | "turnover") => {
     datasets: [
       {
         label: "Montant en euros",
-        data: labels.map(() => faker.number.int({ min: 2000, max: 10000 })),
+        data: labels.map(() => randNumber({ min: 2000, max: 10000 })),
         backgroundColor: labels.map((_, i) => THEME_COLORS.theme[i + 1]),
       },
     ],
