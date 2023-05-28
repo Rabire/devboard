@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useStore } from "@nanostores/react";
+import cn from "classnames";
 import { eachHourOfInterval, format, set } from "date-fns";
 import { $selectedDay, selectedDayActivities } from "../stores/productivity";
 import NotificationIcon from "./svg/NotificationIcon";
@@ -7,6 +9,7 @@ import ActivityCard from "./ActivityCard";
 const BulletJournal = () => {
   const selectedDay = useStore($selectedDay);
   const activities = useStore(selectedDayActivities);
+  const [isMuted, setIsMuted] = useState(false);
 
   const hours = eachHourOfInterval({
     start: set(selectedDay, { hours: 6 }),
@@ -18,7 +21,13 @@ const BulletJournal = () => {
       {/* Header */}
       <div className="section-header mb-2.5">
         <h2>Planning</h2>
-        <button disabled>
+        <button
+          className={cn(
+            "hover:bg-white/20 aspect-square p-2 rounded-full",
+            isMuted && "opacity-50"
+          )}
+          onClick={() => setIsMuted((prev) => !prev)}
+        >
           <NotificationIcon />
         </button>
       </div>
