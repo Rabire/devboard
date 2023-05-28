@@ -3,6 +3,7 @@ import PauseIcon from "./svg/PauseIcon";
 import SkipMusicIcon from "./svg/SkipMusicIcon";
 import MOCK_MUSICS from "../static/mock-musics";
 import { formatSeconds } from "../utils/format";
+import PlayIcon from "./svg/PlayIcon";
 
 const MusicPlayer = () => {
   const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
@@ -39,7 +40,7 @@ const MusicPlayer = () => {
         aria-label="pause music"
         onClick={() => setIsPaused((prev) => !prev)}
       >
-        <PauseIcon />
+        {isPaused ? <PauseIcon /> : <PlayIcon />}
       </button>
 
       <div className="flex flex-col justify-between h-full">
