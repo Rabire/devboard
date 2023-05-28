@@ -6,6 +6,7 @@ import {
   Tooltip,
   ChartData,
   Legend,
+  ChartOptions,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import FilterButton from "./FilterButton";
@@ -25,7 +26,7 @@ const TimeChart = () => {
     datasets: activitiesDatasets,
   };
 
-  const options = {
+  const options: ChartOptions<"bar"> = {
     plugins: {
       legend: {
         position: "bottom",

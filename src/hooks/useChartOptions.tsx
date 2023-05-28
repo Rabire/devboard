@@ -1,4 +1,5 @@
 import { useStore } from "@nanostores/react";
+import { ChartOptions } from "chart.js";
 import { $settings } from "../stores/theme";
 import THEME_COLORS from "../utils/tailwing-config";
 
@@ -15,7 +16,7 @@ const useChartOptions = () => {
 
   const scales = { x: scale, y: scale };
 
-  const lineChartOptions = {
+  const lineChartOptions: ChartOptions<"line"> = {
     plugins: {
       legend: {
         position: "bottom",

@@ -8,12 +8,12 @@ import {
   startOfToday,
   startOfMonth,
 } from "date-fns";
+import { fr } from "date-fns/locale";
 import cn from "classnames";
 import { useStore } from "@nanostores/react";
 import Swiper from "./Swiper";
 import { $selectedDay, setSelectedDay } from "../stores/productivity";
 import { WEEK_DAYS } from "../static/calendar";
-import { fr } from "date-fns/locale";
 
 const today = startOfToday();
 

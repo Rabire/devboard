@@ -7,6 +7,7 @@ import {
   Filler,
   Tooltip,
   Legend,
+  ChartOptions,
 } from "chart.js";
 import { useStore } from "@nanostores/react";
 import { Radar } from "react-chartjs-2";
@@ -39,7 +40,7 @@ const CodeBaseChart = () => {
     ],
   };
 
-  const options = {
+  const options: ChartOptions<"radar"> = {
     plugins: { legend: { display: false } },
     scales: {
       r: {

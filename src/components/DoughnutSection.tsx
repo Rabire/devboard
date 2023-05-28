@@ -1,4 +1,10 @@
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  ChartOptions,
+} from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import FilterButton from "./FilterButton";
 import useDoughnutChart from "../hooks/useDoughnutChart";
@@ -14,7 +20,7 @@ const DoughnutSection = ({ type }: Props) => {
   const { year, setYear, data } = useDoughnutChart(type);
   const { color } = useChartOptions();
 
-  const options = {
+  const options: ChartOptions<"doughnut"> & { borderWidth: number } = {
     plugins: {
       legend: {
         position: "right",

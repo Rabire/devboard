@@ -6,6 +6,7 @@ import {
   Tooltip,
   ChartData,
   Legend,
+  ChartOptions,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import useProductivityChart from "../hooks/useProductivityChart";
@@ -25,7 +26,7 @@ const TasksChart = () => {
     datasets: tasksDatasets,
   };
 
-  const options = {
+  const options: ChartOptions<"bar"> = {
     indexAxis: "y",
     plugins: { legend: { display: false } },
     scales,
