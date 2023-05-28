@@ -1,11 +1,11 @@
-import PRStatus from "./enums";
-
 export type Slot = { start: number; end: number };
 export type HalfDaySlots = [Slot, Slot]; // Because we generate 4 activities per day
 
+export type PRStatus = "ready" | "rejected" | "pending" | "draft";
+
 export type PRGroup = {
   pullRequests: string[];
-  status: PRStatus;
+  status: string;
 };
 
 export type Sprint = {
