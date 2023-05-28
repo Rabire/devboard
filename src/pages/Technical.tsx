@@ -17,7 +17,7 @@ const Technical = () => {
   return (
     <main>
       {/* left */}
-      <div className="flex flex-col tablet:grid grid-rows-[1fr_2fr_5fr] gap-5 tablet:max-h-content">
+      <div className="flex flex-col tablet:grid grid-rows-[1fr_2fr_5fr] gap-5 tablet:h-main">
         <ProjectsSwiper />
         <ProgressBarSection
           title={currentProject.name}
@@ -29,7 +29,7 @@ const Technical = () => {
       </div>
 
       {/* tablet:left desktop:middle */}
-      <div className="flex flex-col gap-5 max-h-content">
+      <div className="flex flex-col gap-5 h-main">
         <NotesTakingSection />
         <IssuesChart />
       </div>
@@ -38,7 +38,7 @@ const Technical = () => {
       <div
         className={cn(
           "flex flex-col tablet:grid grid-rows-[auto_1fr]",
-          "desktop:max-h-content gap-5",
+          "desktop:h-main gap-5",
           "tablet:grid-cols-2 desktop:grid-cols-1",
           "tablet:col-span-2 desktop:col-span-1"
         )}

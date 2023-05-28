@@ -3,7 +3,7 @@ import Expense from "./Expense";
 
 const expenses = generateExpenses();
 const ExpensesSection = () => (
-  <section className="desktop:row-span-3 overflow-scroll p-0 relative max-h-content">
+  <section className="desktop:row-span-3 overflow-scroll p-0 relative h-main">
     <h2 className="section-header">Relevé de compte</h2>
 
     <div className="px-5">

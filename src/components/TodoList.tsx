@@ -11,7 +11,7 @@ const TodoList = () => {
   const done = doneTasks.get();
 
   return (
-    <section className="tablet:overflow-y-scroll bg-secondary p-0 tablet:max-h-content">
+    <section className="tablet:overflow-y-scroll bg-secondary p-0 tablet:h-main">
       {/* Header */}
       <div className="section-header">
         <h2>Mes tâches</h2>

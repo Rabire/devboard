@@ -1,7 +1,6 @@
 import PRStatus from "../utils/enums";
 import PRStatusList from "./PRStatusList";
 
-// TODO: header fixed
 const PullRequestSection = () => (
   <section className="desktop:overflow-y-scroll p-0">
     <h2 className="section-header">Mes pull-requests</h2>

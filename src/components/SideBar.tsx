@@ -13,7 +13,7 @@ const SideBar = () => {
     <aside className="h-full z-40">
       <nav
         className={cn(
-          "hidden tablet:flex sticky top-5 max-h-content",
+          "hidden tablet:flex sticky top-5 h-main",
           "bg-light-secondary dark:bg-dark-secondary rounded-2xl",
           "flex-col justify-between items-center py-12 px-5"
         )}

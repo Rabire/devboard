@@ -33,15 +33,14 @@
     @apply tablet:grid tablet:grid-cols-[1fr_9fr] desktop:grid-cols-[1fr_8fr] gap-5;
   }
 
-  .max-h-content {
-    // TODO: rename all max-h-content by h-content
+  .h-main {
     height: var(--content-height);
   }
 
   main {
     @apply flex flex-col gap-5;
     @apply tablet:grid tablet:grid-cols-2;
-    @apply desktop:grid-cols-3 desktop:max-h-content;
+    @apply desktop:grid-cols-3 desktop:h-main;
   }
 
   h2 {

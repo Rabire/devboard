@@ -12,7 +12,7 @@ const Productivity = () => (
     <TodoList />
 
     {/* tablet:right desktop:middle */}
-    <div className="flex flex-col gap-5 tablet:max-h-content">
+    <div className="flex flex-col gap-5 tablet:h-main">
       <MusicPlayer />
       <TimeChart />
       <TasksChart />
@@ -21,7 +21,7 @@ const Productivity = () => (
     {/* tablet:full-width desktop:right */}
     <div
       className={cn(
-        "flex flex-col gap-5 max-h-content",
+        "flex flex-col gap-5 h-main",
         "tablet:col-span-2 tablet:grid tablet:grid-cols-2 tablet:max-h-[300px]",
         "desktop:col-span-1 desktop:flex desktop:max-h-none"
       )}
