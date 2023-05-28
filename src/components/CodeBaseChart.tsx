@@ -47,6 +47,7 @@ const CodeBaseChart = () => {
           display: false,
         },
         beginAtZero: true,
+        suggestedMax: 100,
         grid: { color: THEME_COLORS[mode] },
         angleLines: { color: THEME_COLORS[mode] },
         pointLabels: {
