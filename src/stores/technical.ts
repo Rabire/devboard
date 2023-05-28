@@ -21,8 +21,9 @@ export const teams = computed($project, ({ members }) =>
 );
 
 export const membersSprints = computed($project, ({ members, sprints }) =>
-  [...new Set(sprints)].map((sprint) => ({
+  sprints.map((sprint) => ({
     sprint,
     members: members.filter((member) => member.sprint === sprint),
   }))
 );
+// TODO remove doubles

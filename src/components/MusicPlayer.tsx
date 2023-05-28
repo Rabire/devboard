@@ -3,7 +3,7 @@ import SkipMusicIcon from "./svg/SkipMusicIcon";
 
 const MusicPlayer = () => (
   <section className="flex h-[150px] gap-5 items-center justify-center">
-    <button className="album">
+    <button className="album" aria-label="pause music">
       <PauseIcon />
     </button>
 
@@ -17,10 +17,10 @@ const MusicPlayer = () => (
 
         {/* Skip songs  */}
         <div className="flex gap-5 items-center">
-          <button disabled>
+          <button disabled aria-label="previous music">
             <SkipMusicIcon />
           </button>
-          <button disabled className="rotate-180">
+          <button disabled className="rotate-180" aria-label="next music">
             <SkipMusicIcon />
           </button>
         </div>
@@ -30,6 +30,7 @@ const MusicPlayer = () => (
       <div className="flex gap-2.5 items-center">
         <p>1:22</p>
         <input
+          aria-label="music timeline"
           type="range"
           min={0}
           defaultValue={82}

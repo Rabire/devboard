@@ -18,6 +18,7 @@ const TodoList = () => {
           <h2>Mes tâches</h2>
           <button
             disabled
+            aria-label="add-task"
             className="bg-black dark:bg-white text-white h-[20px] min-w-[20px] flex items-center justify-center rounded-full"
           >
             <AddIcon />

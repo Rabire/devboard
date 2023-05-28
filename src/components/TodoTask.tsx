@@ -17,6 +17,7 @@ const TodoTask = ({ task, index }: Props) => (
     >
       <input
         disabled
+        aria-label="mark as done or todo"
         type="checkbox"
         defaultChecked={task.isDone}
         className={cn(
@@ -32,10 +33,10 @@ const TodoTask = ({ task, index }: Props) => (
       </div>
 
       <div className="flex opacity-0 transition-opacity absolute bg-secondary gap-2.5 p-2.5 right-0 top-2.5 group-hover:opacity-100">
-        <button disabled>
+        <button disabled aria-label="delete task">
           <BinIcon />
         </button>
-        <button disabled>
+        <button disabled aria-label="edit task">
           <EditIcon />
         </button>
       </div>

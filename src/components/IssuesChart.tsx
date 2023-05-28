@@ -39,12 +39,12 @@ const IssuesChart = () => {
         <FilterButton
           buttons={[
             {
-              label: "All",
+              label: "Toutes",
               onClick: () => setAllStats(true),
               isActive: allStats,
             },
             {
-              label: "Vôtres",
+              label: "Vous",
               onClick: () => setAllStats(false),
               isActive: !allStats,
             },
