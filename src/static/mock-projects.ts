@@ -1,4 +1,4 @@
-export const PROJECTS = ["Projet X", "Projet Y", "Projet Z"];
+export const PROJECTS = ["Projet XX", "Projet YY", "Projet ZZ"];
 
 export const TEAMS = ["Backend", "Frontend", "Mobile", "Produit/Design"];
 

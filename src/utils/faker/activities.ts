@@ -1,19 +1,17 @@
 import { eachDayOfInterval, isSaturday, isSunday, set } from "date-fns";
 import { rand } from "@ngneat/falso";
 import { Activity, Slot } from "../types";
-import { $project } from "../../stores/technical";
 import {
   AM_SLOTS,
   MOCK_ACTIVITIES,
   PM_SLOTS,
 } from "../../static/mock-activities";
-
-const project = $project.get();
+import projects from "../projects";
 
 const generateSlotActivity = (day: Date, slot: Slot) => {
   const activity: Activity = {
     name: rand(MOCK_ACTIVITIES),
-    project,
+    project: rand(projects),
     start: set(day, { hours: slot.start }),
     end: set(day, { hours: slot.end }),
   };
