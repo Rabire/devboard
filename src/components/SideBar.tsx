@@ -25,7 +25,7 @@ const SideBar = () => {
             <Link
               key={link.link}
               to={link.link}
-              className="text-center"
+              className="text-center transition-transform hover:scale-110"
               aria-label={`${link.text} page`}
             >
               {link.icon}
@@ -36,6 +36,7 @@ const SideBar = () => {
             <button
               onClick={() => setShowOptions(true)}
               aria-label="open theme options"
+              className="transition-transform hover:scale-110"
             >
               <OptionsIcon />
             </button>
