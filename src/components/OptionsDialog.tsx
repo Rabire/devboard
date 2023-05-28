@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useStore } from "@nanostores/react";
 import { THEME_COLORS } from "../styles/themes";
 import { setTheme, $settings, switchMode } from "../stores/theme";
+import CheckIcon from "./svg/CheckIcon";
 
 type Props = {
   isDialog?: true;
@@ -69,9 +70,7 @@ const OptionsDialog = ({ isDialog, close = () => null, isOpen }: Props) => {
                 )}
                 style={{ backgroundColor: color }}
               >
-                {theme === color && (
-                  <img src="/icons/checked-black.svg" alt="check icon" />
-                )}
+                {theme === color && <CheckIcon />}
               </motion.button>
             ))}
           </div>
