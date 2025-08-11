@@ -1,10 +1,10 @@
 import { lazy, Suspense } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
+import IntroOverlay from "./components/IntroOverlay";
+import Loader from "./components/Loader";
 import MobileMenu from "./components/MobileMenu";
 import SideBar from "./components/SideBar";
 import useSettings from "./hooks/useSettings";
-import IntroOverlay from "./components/IntroOverlay";
-import Loader from "./components/Loader";
 
 const Productivity = lazy(() => import("./pages/Productivity"));
 const Administrative = lazy(() => import("./pages/Administrative"));

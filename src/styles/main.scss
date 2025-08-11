@@ -1,6 +1,9 @@
+@use "./fonts" as *;
+@use "./base" as *;
+@use "./components" as *;
+@use "./utilities" as *;
+@use "./animations" as *;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "./fonts.scss", "./base.scss", "./components.scss", "./utilities.scss",
-  "./animations.scss";
